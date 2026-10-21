@@ -1,0 +1,1110 @@
+{
+  "player": [
+    {
+      "region": [
+        68,
+        14,
+        280,
+        465
+      ],
+      "tip": [
+        186.83333333333334,
+        38.0
+      ],
+      "texture": "res://assets/teo_rear.png"
+    },
+    {
+      "region": [
+        456,
+        40,
+        277,
+        446
+      ],
+      "tip": [
+        197.76470588235293,
+        40.0
+      ],
+      "texture": "res://assets/teo_rear.png"
+    },
+    {
+      "region": [
+        829,
+        39,
+        285,
+        438
+      ],
+      "tip": [
+        78.78571428571429,
+        43.0
+      ],
+      "texture": "res://assets/teo_rear.png"
+    },
+    {
+      "region": [
+        1233,
+        3,
+        237,
+        494
+      ],
+      "tip": [
+        210.52083333333334,
+        4.0
+      ],
+      "texture": "res://assets/teo_rear.png"
+    },
+    {
+      "region": [
+        87,
+        500,
+        292,
+        509
+      ],
+      "tip": [
+        226.0,
+        3.0
+      ],
+      "texture": "res://assets/teo_rear.png"
+    },
+    {
+      "region": [
+        473,
+        572,
+        269,
+        427
+      ],
+      "tip": [
+        160.0,
+        4.0
+      ],
+      "texture": "res://assets/teo_rear.png"
+    },
+    {
+      "region": [
+        867,
+        492,
+        264,
+        518
+      ],
+      "tip": [
+        154.90196078431373,
+        3.0
+      ],
+      "texture": "res://assets/teo_rear.png"
+    },
+    {
+      "region": [
+        1228,
+        684,
+        240,
+        305
+      ],
+      "tip": [
+        206.5,
+        178.0
+      ],
+      "texture": "res://assets/teo_rear.png"
+    },
+    {
+      "texture": "res://assets/teo_recovered_motion.png",
+      "region": [
+        123,
+        31,
+        166,
+        467
+      ],
+      "tip": [
+        43.82608695652174,
+        3
+      ],
+      "alpha_component_area": 45618
+    },
+    {
+      "texture": "res://assets/teo_recovered_motion.png",
+      "region": [
+        492,
+        53,
+        184,
+        442
+      ],
+      "tip": [
+        132.0,
+        44
+      ],
+      "alpha_component_area": 43101
+    },
+    {
+      "texture": "res://assets/teo_recovered_motion.png",
+      "region": [
+        883,
+        49,
+        200,
+        444
+      ],
+      "tip": [
+        110.41025641025641,
+        70
+      ],
+      "alpha_component_area": 46031
+    },
+    {
+      "texture": "res://assets/teo_recovered_motion.png",
+      "region": [
+        1236,
+        53,
+        181,
+        441
+      ],
+      "tip": [
+        69.25581395348837,
+        66
+      ],
+      "alpha_component_area": 43725
+    },
+    {
+      "texture": "res://assets/teo_recovered_motion.png",
+      "region": [
+        120,
+        577,
+        188,
+        415
+      ],
+      "tip": [
+        149.7948717948718,
+        68
+      ],
+      "alpha_component_area": 42492
+    },
+    {
+      "texture": "res://assets/teo_recovered_motion.png",
+      "region": [
+        472,
+        515,
+        234,
+        477
+      ],
+      "tip": [
+        30.22222222222222,
+        1
+      ],
+      "alpha_component_area": 45969
+    },
+    {
+      "texture": "res://assets/teo_recovered_motion.png",
+      "region": [
+        855,
+        596,
+        246,
+        396
+      ],
+      "tip": [
+        196.91836734693877,
+        64
+      ],
+      "alpha_component_area": 45254
+    },
+    {
+      "texture": "res://assets/teo_recovered_motion.png",
+      "region": [
+        1208,
+        649,
+        272,
+        334
+      ],
+      "tip": [
+        11.666666666666666,
+        122
+      ],
+      "alpha_component_area": 46909
+    },
+    {
+      "texture": "res://assets/teo_recovered_attacks.png",
+      "region": [
+        87,
+        50,
+        182,
+        443
+      ],
+      "tip": [
+        80.66666666666667,
+        32
+      ],
+      "alpha_component_area": 44852
+    },
+    {
+      "texture": "res://assets/teo_recovered_attacks.png",
+      "region": [
+        508,
+        14,
+        167,
+        478
+      ],
+      "tip": [
+        140.14893617021278,
+        3
+      ],
+      "alpha_component_area": 38262
+    },
+    {
+      "texture": "res://assets/teo_recovered_attacks.png",
+      "region": [
+        879,
+        56,
+        167,
+        436
+      ],
+      "tip": [
+        45.625,
+        44
+      ],
+      "alpha_component_area": 42484
+    },
+    {
+      "texture": "res://assets/teo_recovered_attacks.png",
+      "region": [
+        1277,
+        46,
+        180,
+        447
+      ],
+      "tip": [
+        123.07142857142857,
+        24
+      ],
+      "alpha_component_area": 45002
+    },
+    {
+      "texture": "res://assets/teo_recovered_attacks.png",
+      "region": [
+        107,
+        524,
+        170,
+        481
+      ],
+      "tip": [
+        141.0,
+        2
+      ],
+      "alpha_component_area": 42881
+    },
+    {
+      "texture": "res://assets/teo_recovered_attacks.png",
+      "region": [
+        517,
+        509,
+        111,
+        498
+      ],
+      "tip": [
+        69.79661016949153,
+        3
+      ],
+      "alpha_component_area": 33284
+    },
+    {
+      "texture": "res://assets/teo_recovered_attacks.png",
+      "region": [
+        905,
+        514,
+        121,
+        492
+      ],
+      "tip": [
+        42.93478260869565,
+        3
+      ],
+      "alpha_component_area": 32585
+    },
+    {
+      "texture": "res://assets/teo_recovered_attacks.png",
+      "region": [
+        1248,
+        575,
+        226,
+        428
+      ],
+      "tip": [
+        50.4375,
+        67
+      ],
+      "alpha_component_area": 47629
+    },
+    {
+      "texture": "res://assets/teo_recovered_stances.png",
+      "region": [
+        131,
+        13,
+        202,
+        473
+      ],
+      "tip": [
+        147.0952380952381,
+        41
+      ],
+      "alpha_component_area": 50539
+    },
+    {
+      "texture": "res://assets/teo_recovered_stances.png",
+      "region": [
+        462,
+        13,
+        202,
+        477
+      ],
+      "tip": [
+        53.41025641025641,
+        41
+      ],
+      "alpha_component_area": 50813
+    },
+    {
+      "texture": "res://assets/teo_recovered_stances.png",
+      "region": [
+        860,
+        28,
+        202,
+        460
+      ],
+      "tip": [
+        39.075,
+        222
+      ],
+      "alpha_component_area": 54328
+    },
+    {
+      "texture": "res://assets/teo_recovered_stances.png",
+      "region": [
+        1226,
+        28,
+        206,
+        458
+      ],
+      "tip": [
+        124.61290322580645,
+        222
+      ],
+      "alpha_component_area": 54596
+    },
+    {
+      "texture": "res://assets/teo_recovered_stances.png",
+      "region": [
+        106,
+        517,
+        204,
+        486
+      ],
+      "tip": [
+        124.525,
+        237
+      ],
+      "alpha_component_area": 58898
+    },
+    {
+      "texture": "res://assets/teo_recovered_stances.png",
+      "region": [
+        491,
+        524,
+        179,
+        457
+      ],
+      "tip": [
+        71.125,
+        85
+      ],
+      "alpha_component_area": 44763
+    },
+    {
+      "texture": "res://assets/teo_recovered_stances.png",
+      "region": [
+        889,
+        503,
+        153,
+        495
+      ],
+      "tip": [
+        75.9423076923077,
+        3
+      ],
+      "alpha_component_area": 50136
+    },
+    {
+      "texture": "res://assets/teo_recovered_stances.png",
+      "region": [
+        1273,
+        494,
+        133,
+        502
+      ],
+      "tip": [
+        78.36111111111111,
+        2
+      ],
+      "alpha_component_area": 46212
+    },
+    {
+      "texture": "res://assets/teo_recovered_finish.png",
+      "region": [
+        184,
+        51,
+        307,
+        535
+      ],
+      "tip": [
+        93.96969696969697,
+        3
+      ],
+      "alpha_component_area": 72167
+    },
+    {
+      "texture": "res://assets/teo_recovered_finish.png",
+      "region": [
+        774,
+        85,
+        311,
+        497
+      ],
+      "tip": [
+        162.05882352941177,
+        4
+      ],
+      "alpha_component_area": 71516
+    },
+    {
+      "texture": "res://assets/teo_recovered_finish.png",
+      "region": [
+        248,
+        619,
+        173,
+        595
+      ],
+      "tip": [
+        85.22549019607843,
+        3
+      ],
+      "alpha_component_area": 61763
+    },
+    {
+      "texture": "res://assets/teo_recovered_finish.png",
+      "region": [
+        790,
+        739,
+        278,
+        463
+      ],
+      "tip": [
+        30.0,
+        55
+      ],
+      "alpha_component_area": 60137
+    },
+    {
+      "texture": "res://assets/teo_recovered_rise.png",
+      "region": [
+        239,
+        70,
+        216,
+        538
+      ],
+      "tip": [
+        116.41666666666667,
+        54
+      ],
+      "alpha_component_area": 73705
+    },
+    {
+      "texture": "res://assets/teo_recovered_rise.png",
+      "region": [
+        813,
+        53,
+        231,
+        560
+      ],
+      "tip": [
+        66.81818181818181,
+        75
+      ],
+      "alpha_component_area": 74955
+    },
+    {
+      "texture": "res://assets/teo_recovered_rise.png",
+      "region": [
+        231,
+        651,
+        233,
+        573
+      ],
+      "tip": [
+        122.35955056179775,
+        77
+      ],
+      "alpha_component_area": 76449
+    },
+    {
+      "texture": "res://assets/teo_recovered_rise.png",
+      "region": [
+        804,
+        639,
+        243,
+        585
+      ],
+      "tip": [
+        126.35714285714286,
+        61
+      ],
+      "alpha_component_area": 79114
+    }
+  ],
+  "opponent": [
+    {
+      "region": [
+        54,
+        13,
+        282,
+        495
+      ],
+      "tip": [
+        142.4047619047619,
+        38.0
+      ],
+      "texture": "res://assets/nico_front.png"
+    },
+    {
+      "region": [
+        429,
+        11,
+        295,
+        500
+      ],
+      "tip": [
+        141.5,
+        16.0
+      ],
+      "texture": "res://assets/nico_front.png"
+    },
+    {
+      "region": [
+        818,
+        16,
+        291,
+        494
+      ],
+      "tip": [
+        127.23255813953489,
+        39.0
+      ],
+      "texture": "res://assets/nico_front.png"
+    },
+    {
+      "region": [
+        1213,
+        16,
+        269,
+        496
+      ],
+      "tip": [
+        158.44444444444446,
+        43.0
+      ],
+      "texture": "res://assets/nico_front.png"
+    },
+    {
+      "region": [
+        57,
+        527,
+        292,
+        475
+      ],
+      "tip": [
+        149.53846153846155,
+        41.0
+      ],
+      "texture": "res://assets/nico_front.png"
+    },
+    {
+      "region": [
+        425,
+        542,
+        347,
+        460
+      ],
+      "tip": [
+        122.5,
+        11.0
+      ],
+      "texture": "res://assets/nico_front.png"
+    },
+    {
+      "region": [
+        867,
+        699,
+        226,
+        304
+      ],
+      "tip": [
+        122.14285714285714,
+        10.0
+      ],
+      "texture": "res://assets/nico_front.png"
+    },
+    {
+      "region": [
+        1234,
+        635,
+        240,
+        370
+      ],
+      "tip": [
+        131.75,
+        43.0
+      ],
+      "texture": "res://assets/nico_front.png"
+    },
+    {
+      "texture": "res://assets/nico_recovered_motion.png",
+      "region": [
+        92,
+        18,
+        211,
+        490
+      ],
+      "tip": [
+        79.88235294117646,
+        42
+      ],
+      "alpha_component_area": 57567
+    },
+    {
+      "texture": "res://assets/nico_recovered_motion.png",
+      "region": [
+        481,
+        15,
+        226,
+        492
+      ],
+      "tip": [
+        105.57142857142857,
+        18
+      ],
+      "alpha_component_area": 61617
+    },
+    {
+      "texture": "res://assets/nico_recovered_motion.png",
+      "region": [
+        867,
+        18,
+        215,
+        490
+      ],
+      "tip": [
+        80.22222222222223,
+        43
+      ],
+      "alpha_component_area": 56351
+    },
+    {
+      "texture": "res://assets/nico_recovered_motion.png",
+      "region": [
+        1309,
+        22,
+        210,
+        479
+      ],
+      "tip": [
+        42.0,
+        22
+      ],
+      "alpha_component_area": 47065
+    },
+    {
+      "texture": "res://assets/nico_recovered_motion.png",
+      "region": [
+        107,
+        518,
+        172,
+        492
+      ],
+      "tip": [
+        87.78571428571429,
+        46
+      ],
+      "alpha_component_area": 51126
+    },
+    {
+      "texture": "res://assets/nico_recovered_motion.png",
+      "region": [
+        444,
+        543,
+        302,
+        452
+      ],
+      "tip": [
+        162.0,
+        37
+      ],
+      "alpha_component_area": 59337
+    },
+    {
+      "texture": "res://assets/nico_recovered_motion.png",
+      "region": [
+        771,
+        653,
+        392,
+        325
+      ],
+      "tip": [
+        183.0,
+        19
+      ],
+      "alpha_component_area": 50686
+    },
+    {
+      "texture": "res://assets/nico_recovered_motion.png",
+      "region": [
+        1293,
+        518,
+        171,
+        492
+      ],
+      "tip": [
+        94.23076923076923,
+        43
+      ],
+      "alpha_component_area": 53245
+    },
+    {
+      "texture": "res://assets/nico_recovered_reactions.png",
+      "region": [
+        92,
+        18,
+        227,
+        483
+      ],
+      "tip": [
+        93.2,
+        53
+      ],
+      "alpha_component_area": 64047
+    },
+    {
+      "texture": "res://assets/nico_recovered_reactions.png",
+      "region": [
+        398,
+        32,
+        301,
+        469
+      ],
+      "tip": [
+        201.63636363636363,
+        55
+      ],
+      "alpha_component_area": 67548
+    },
+    {
+      "texture": "res://assets/nico_recovered_reactions.png",
+      "region": [
+        814,
+        17,
+        296,
+        491
+      ],
+      "tip": [
+        175.0,
+        18
+      ],
+      "alpha_component_area": 69639
+    },
+    {
+      "texture": "res://assets/nico_recovered_reactions.png",
+      "region": [
+        1205,
+        18,
+        286,
+        488
+      ],
+      "tip": [
+        168.47826086956522,
+        23
+      ],
+      "alpha_component_area": 65333
+    },
+    {
+      "texture": "res://assets/nico_recovered_reactions.png",
+      "region": [
+        54,
+        530,
+        297,
+        470
+      ],
+      "tip": [
+        97.875,
+        18
+      ],
+      "alpha_component_area": 60552
+    },
+    {
+      "texture": "res://assets/nico_recovered_reactions.png",
+      "region": [
+        460,
+        530,
+        294,
+        463
+      ],
+      "tip": [
+        30.6875,
+        37
+      ],
+      "alpha_component_area": 62341
+    },
+    {
+      "texture": "res://assets/nico_recovered_reactions.png",
+      "region": [
+        783,
+        630,
+        373,
+        342
+      ],
+      "tip": [
+        188.4,
+        34
+      ],
+      "alpha_component_area": 66319
+    },
+    {
+      "texture": "res://assets/nico_recovered_reactions.png",
+      "region": [
+        1199,
+        587,
+        295,
+        399
+      ],
+      "tip": [
+        241.5,
+        40
+      ],
+      "alpha_component_area": 67196
+    },
+    {
+      "texture": "res://assets/nico_recovered_stances.png",
+      "region": [
+        106,
+        14,
+        200,
+        489
+      ],
+      "tip": [
+        101.06896551724138,
+        40
+      ],
+      "alpha_component_area": 57340
+    },
+    {
+      "texture": "res://assets/nico_recovered_stances.png",
+      "region": [
+        408,
+        13,
+        329,
+        485
+      ],
+      "tip": [
+        165.4,
+        40
+      ],
+      "alpha_component_area": 64362
+    },
+    {
+      "texture": "res://assets/nico_recovered_stances.png",
+      "region": [
+        863,
+        14,
+        197,
+        489
+      ],
+      "tip": [
+        98.42105263157895,
+        40
+      ],
+      "alpha_component_area": 57743
+    },
+    {
+      "texture": "res://assets/nico_recovered_stances.png",
+      "region": [
+        1248,
+        14,
+        180,
+        489
+      ],
+      "tip": [
+        79.94736842105263,
+        43
+      ],
+      "alpha_component_area": 54919
+    },
+    {
+      "texture": "res://assets/nico_recovered_stances.png",
+      "region": [
+        119,
+        524,
+        166,
+        482
+      ],
+      "tip": [
+        95.92307692307692,
+        40
+      ],
+      "alpha_component_area": 47013
+    },
+    {
+      "texture": "res://assets/nico_recovered_stances.png",
+      "region": [
+        483,
+        526,
+        193,
+        481
+      ],
+      "tip": [
+        107.9,
+        41
+      ],
+      "alpha_component_area": 51354
+    },
+    {
+      "texture": "res://assets/nico_recovered_stances.png",
+      "region": [
+        859,
+        528,
+        176,
+        472
+      ],
+      "tip": [
+        104.3157894736842,
+        30
+      ],
+      "alpha_component_area": 49163
+    },
+    {
+      "texture": "res://assets/nico_recovered_stances.png",
+      "region": [
+        1259,
+        527,
+        174,
+        468
+      ],
+      "tip": [
+        102.5,
+        30
+      ],
+      "alpha_component_area": 49111
+    },
+    {
+      "texture": "res://assets/nico_recovered_finish.png",
+      "region": [
+        33,
+        32,
+        287,
+        441
+      ],
+      "tip": [
+        259.52941176470586,
+        34
+      ],
+      "alpha_component_area": 50745
+    },
+    {
+      "texture": "res://assets/nico_recovered_finish.png",
+      "region": [
+        434,
+        57,
+        311,
+        383
+      ],
+      "tip": [
+        185.8780487804878,
+        44
+      ],
+      "alpha_component_area": 51447
+    },
+    {
+      "texture": "res://assets/nico_recovered_finish.png",
+      "region": [
+        777,
+        149,
+        357,
+        297
+      ],
+      "tip": [
+        250.82857142857142,
+        27
+      ],
+      "alpha_component_area": 52332
+    },
+    {
+      "texture": "res://assets/nico_recovered_finish.png",
+      "region": [
+        1195,
+        107,
+        328,
+        348
+      ],
+      "tip": [
+        164.33333333333334,
+        33
+      ],
+      "alpha_component_area": 59420
+    },
+    {
+      "texture": "res://assets/nico_recovered_finish.png",
+      "region": [
+        46,
+        582,
+        305,
+        395
+      ],
+      "tip": [
+        65.5,
+        32
+      ],
+      "alpha_component_area": 60931
+    },
+    {
+      "texture": "res://assets/nico_recovered_finish.png",
+      "region": [
+        457,
+        476,
+        277,
+        523
+      ],
+      "tip": [
+        181.25581395348837,
+        2
+      ],
+      "alpha_component_area": 57221
+    },
+    {
+      "texture": "res://assets/nico_recovered_finish.png",
+      "region": [
+        857,
+        541,
+        187,
+        462
+      ],
+      "tip": [
+        88.85,
+        44
+      ],
+      "alpha_component_area": 48134
+    },
+    {
+      "texture": "res://assets/nico_recovered_finish.png",
+      "region": [
+        1179,
+        566,
+        330,
+        422
+      ],
+      "tip": [
+        175.625,
+        44
+      ],
+      "alpha_component_area": 56289
+    }
+  ]
+}

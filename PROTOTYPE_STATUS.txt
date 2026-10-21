@@ -1,0 +1,19 @@
+HISTORICAL DOCUMENT - superseded as current guidance on 2026-10-21.
+Current handoff: docs/CURRENT_STATE.md
+Architecture, art decisions and development commands: see README.md.
+The original text below is retained as historical evidence and may contradict current code.
+
+STATUS - 2026-10-20
+The main fight now integrates recovered first-opponent schedules, action
+windows, defense, hearts, stars, specials, knockdowns, get-ups and scoring.
+It replaces the invented prototype, preserved in research/prototype_backup.
+Original generated Nico art is used; the runtime requires no ROM.
+This is a measured behavioral port, not a complete frame-perfect translation.
+Conditional animation branches, RNG and some presentation remain approximate.
+Current report: research/RECOVERY_UPDATE.txt. Controls: PLAY.txt.
+
+Visual correction: frontal opponent plus rear-view player now present.
+Nineteen captured animation tracks now drive render timing/positions. Original
+art mapping and full animation branching remain incomplete. Current detailed
+status: research/ANIMATION_RECOVERY.txt. Side-by-side frame comparison:
+research/evidence/comparison/index.html.

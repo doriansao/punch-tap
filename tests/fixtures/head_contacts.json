@@ -1,0 +1,72 @@
+[
+  {
+    "frame": 2312,
+    "hp": 96,
+    "knockout_window": false,
+    "ordinary_damage": 5,
+    "expected": 91
+  },
+  {
+    "frame": 2367,
+    "hp": 91,
+    "knockout_window": false,
+    "ordinary_damage": 5,
+    "expected": 86
+  },
+  {
+    "frame": 2422,
+    "hp": 86,
+    "knockout_window": false,
+    "ordinary_damage": 5,
+    "expected": 81
+  },
+  {
+    "frame": 2477,
+    "hp": 81,
+    "knockout_window": false,
+    "ordinary_damage": 5,
+    "expected": 76
+  },
+  {
+    "frame": 2532,
+    "hp": 76,
+    "knockout_window": false,
+    "ordinary_damage": 5,
+    "expected": 71
+  },
+  {
+    "frame": 2587,
+    "hp": 71,
+    "knockout_window": false,
+    "ordinary_damage": 5,
+    "expected": 66
+  },
+  {
+    "frame": 2642,
+    "hp": 66,
+    "knockout_window": false,
+    "ordinary_damage": 5,
+    "expected": 61
+  },
+  {
+    "frame": 2697,
+    "hp": 61,
+    "knockout_window": false,
+    "ordinary_damage": 5,
+    "expected": 56
+  },
+  {
+    "frame": 2752,
+    "hp": 56,
+    "knockout_window": false,
+    "ordinary_damage": 5,
+    "expected": 51
+  },
+  {
+    "frame": 2917,
+    "hp": 51,
+    "knockout_window": true,
+    "ordinary_damage": 5,
+    "expected": 0
+  }
+]

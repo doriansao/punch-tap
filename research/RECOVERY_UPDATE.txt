@@ -1,0 +1,107 @@
+HISTORICAL DOCUMENT - superseded as current guidance on 2026-10-21.
+Current handoff: ../docs/CURRENT_STATE.md
+Architecture, art decisions and development commands: see ../README.md.
+The original text below is retained as historical evidence and may contradict current code.
+
+PUNCH TAP! - INTEGRATED ROM RECOVERY, 20 OCTOBER 2026
+==================================================
+
+RESULT AND SCOPE
+The playable main scene now uses recovered first-opponent rules instead of
+the former invented stamina/counter combat. Mara Vale, the arena, HUD, gloves
+and sound remain original. The runtime does not load the ROM or an emulator.
+This is a measured behavioral port, not a complete CPU/bytecode translation
+or a frame-perfect reproduction. Other opponents have not been recovered.
+
+METHOD AND REPRODUCTION
+Source: G:/Programming/punch-out-ai/rom/punch-out.nes, mapper 9 / MMC2, NTSC.
+SHA256: 60ef51f55f6addb7a1893f816aad75ee3e146dd646958a865d3bece5b429b600
+Mesen 2.1.1 testRunner injected ordinary pad input and captured 2 KiB of RAM
+every video frame. Bank-aware 6502 disassembly and execution probes linked
+observed changes to routines. No RAM cheats were used for the natural bouts.
+run-research.ps1 reruns cases; make_deep_experiments.py describes the deeper
+input scenarios. disasm_range.py prints bank-aware code. build_rules.py
+exports semantic schedules and sampled defense/action tracks into
+../assets/data/recovered_rules.json. summarize.py summarizes 25 nonempty
+captures. Raw evidence and logs remain in research/evidence locally.
+
+CORRECTIONS TO THE FIRST REPORT
+$0347 is a star-hit countdown, NOT hearts. Hearts are decimal digits at
+$0323/$0324. $0006 is the round; $030B is NOT the round. Earlier reports and
+raw CSV column labels using those interpretations are superseded here.
+$0050/$0090 are player/opponent action states; $00A5 is a sequence cursor,
+not a universal sprite-frame ID. $0391/$0398 hold player/opponent HP.
+
+OPPONENT LOGIC NOW USED
+Bank 0 schedules at $9478, $949B and $94B9 decode into waits, attacks,
+probability branches and loops. The Godot scheduler executes these symbolic
+commands, including the faster exhaustion pattern. Defense thresholds at
+$B6..$B9 change during attacks, so a punch can land, miss or be blocked.
+Idle head shots deal 5; idle body shots are blocked and cost one heart.
+Jab contact is at age 44 in the initial sampled sequence (24-frame variable
+wait plus 20); cross contact is at 58. Jab wait accelerates after player hits
+received, bounded at 16, and resets after successful retaliation.
+Opponent hits deal 11; guarding normally costs 2 HP and one heart. Receiving
+a hit costs three hearts. At zero hearts punches are disabled; a successful
+evade restores 15 in rounds 1/2, 10 in round 3. Both slips can evade the jab,
+but defense starts six frames after the action starts, not immediately.
+
+SPECIALS AND TAUNT
+$0342 holds 0..3 stars; one star permits one uppercut. The sampled uppercut
+lasts 88 frames, consumes its star at age 1 and contacts at age 43. Its base
+force is 15, with an 8-point damage bonus after defense subtraction.
+The first star counter starts at 20 qualifying nonfatal hits, then reloads
+to 8. The captured award animation adds a star after 31 frames. A player hit
+removes one star; specials decrement the hit counter no lower than one.
+The 40-second taunt has a short knockout opportunity. Bank 7 $8335..$8343
+checks $BA and sets opponent HP to zero. $BA=255 forces a count-out, while
+$BA=1 permits an ordinary recovery. Two observed taunt tracks preserve their
+distinct narrow vulnerability windows. They are not a generic long counter
+window with invented damage multipliers.
+
+KNOCKDOWNS, GET-UPS AND ROUNDS
+$B2EB..$B392 handles opponent knockdown counters and recovery selection.
+Three downs in a round produce TKO. Ordinary first/second opponent recoveries
+usually refill to 80/48 HP. Full-player-health exceptions can restore 96.
+The recovered count distribution is 2,3,4,5,6,8,3,4. A forced-KO flag bypasses
+recovery. The first ordinary capture begins counting 273 frames after the
+down, then advances every 39 frames; get-up and control restoration follow.
+Player recovery requires repeated punch-button presses once $CF enables
+input. Holding a button is insufficient. Wide three-frame presses produced
+two natural get-ups; one-frame pulses sometimes missed controller polling.
+$03C3 counts remaining presses, initially seven. Inactivity can undo progress.
+The first two captured get-ups restored 72 and 48 HP; count-indexed recovery
+tables determine HP/hearts. Three player downs in a round produce TKO.
+Rounds preserve health, reset stars and enforce a heart minimum. After three
+rounds, score decides: $AAC1..$AAD6 compares the score against 5000.
+Recovered points: ordinary hit 10, uppercut 500, star 100, knockdown 1000.
+
+IMPLEMENTATION
+scripts/fight_model.gd is the integrated fixed-60-Hz simulation. main.gd
+renders original art and translates joystick/punch/special press and release
+events. Joystick up selects head, neutral body, down guard, sides dodge.
+It supports multitouch and tap-to-rise. Physics timings are separate from
+the eight illustrated poses. Old prototype scripts are preserved under
+research/prototype_backup for comparison.
+
+VALIDATION
+44 combat checks passed, including 2,142 integrated action-state comparisons
+with captured ROM samples. 21 UI/input checks passed, including a complete
+input-driven bout: stars, uppercuts, get-ups and three opponent downs, TKO,
+player HP 48, 8,550 points, 10,089 simulated frames.
+The separate recovered components passed 4,896 frame comparisons across eight
+ROM experiments and 10 captured contacts, including the instant knockout.
+These totals are checks of specific behavior, NOT whole-bout trace parity.
+Actual Godot viewport captures inspect the new original atlas and HUD.
+
+KNOWN FIDELITY LIMITS / NEXT RECOVERY TARGETS
+Godot seeded RNG is not the NES RNG. Opponent conditional animation bytecode
+is represented by sampled tracks, including two taunt variants, rather than
+a full interpreter. Reaction timing, score-popup/star-delay overlap and some
+count/referee presentation are approximated from observed cases. A complete
+bout will therefore diverge in timing and random choices from a ROM replay.
+Next: decode the remaining conditional animation branches and RNG, capture
+matched input/state traces, and eliminate divergence frame by frame.
+Original illustration poses are not frame-by-frame NES animation transfers.
+Android/iOS exports, real-device multitouch, safe areas and performance still
+need device testing; this turn validates the Windows Godot playable.

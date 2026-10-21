@@ -1,0 +1,7 @@
+Teo proportion reference v2
+Generated using built-in image_gen, from exec-efe520c6-be4f-4fd7-bdad-be7b8a8d2054.png.
+User approved character proportions and requested slightly smaller gloves. This revision implements that request; do not use the earlier realistic atlas anatomy as a character reference.
+This is a character design reference, not a recovered ROM frame or runtime sprite atlas.
+
+Prompt:
+Edit this Teo front/rear character proportion reference sheet with ONE small adjustment only: reduce all four mint boxing gloves and their cuffs by approximately 15 percent in width and height, keeping them attached naturally at the same wrists in the same guard pose. Gloves must still look deliberately oversized and cartoony, just a little smaller than this reference. Preserve absolutely everything else: exact compact cartoon body proportions, head and hair size and shape, face, expression, very short torso, stubby legs, enormous boots, clothing, colors, line style, shading, front and rear views, layout, lettering and ivory background. Do not make his arms, torso or legs longer or more muscular. Do not redesign the character. Maintain identical character scale and overall image framing.

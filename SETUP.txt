@@ -1,0 +1,66 @@
+HISTORICAL DOCUMENT - superseded as current guidance on 2026-10-21.
+Current handoff: docs/CURRENT_STATE.md
+Architecture, art decisions and development commands: see README.md.
+The original text below is retained as historical evidence and may contradict current code.
+
+Punch Tap! - development setup
+==============================
+
+Project: G:\Programming\punch-tap\project.godot
+Engine: Godot 4.7.2 stable .NET (GDScript project; no C# game code)
+Canvas: 540 x 960, portrait, Compatibility renderer.
+Current scene is an installation test, not implemented boxing gameplay.
+
+MCP: Godot MCP Native release v1.0.8
+Upstream: https://github.com/yurineko73/Godot-MCP-Native
+MIT license retained in addons/godot_mcp/LICENSE.
+Downloaded release archives and logs: .setup/ (ignored).
+Companion gdmcp CLI: tools/gdmcp/gdmcp.exe (ignored).
+Download provenance and hashes: tools/godot-mcp-lock.json.
+
+Local patch: addons/godot_mcp/native_mcp/mcp_http_server_legacy.gd
+TCPServer.listen is bound explicitly to 127.0.0.1 rather than all interfaces.
+Preserve this patch on upgrades. No remote tunnel or firewall rule was added.
+Plugin auto-start is saved in this project's Godot user data mcp_settings.cfg.
+
+Start hidden editor/server from PowerShell:
+  .\tools\start-godot-mcp.ps1
+Check connection:
+  .\tools\gdmcp\gdmcp.exe --json doctor
+Inspect scene:
+  .\tools\gdmcp\gdmcp.exe --json scenes tree --depth 3
+Stop the managed hidden editor:
+  .\tools\stop-godot-mcp.ps1
+
+For interactive editing, stop the hidden editor first, then open project.godot
+in Godot. The enabled plugin auto-starts. Do not run two editors for this
+project simultaneously: they would compete for port 9080 and project state.
+
+Codex server registration: punch-tap-godot
+Endpoint: http://127.0.0.1:9080/mcp
+Config: C:\Users\doria\.codex\config.toml
+Pre-change backup: C:\Users\doria\.codex\config.toml.punch-tap-backup
+Reload/restart Codex to expose newly registered tools in the chat.
+Until then, gdmcp and tools/mcp-call.ps1 can call the running server.
+
+Verified 2026-10-20:
+- Engine import and plugin startup; CLI checksum matches packaged SHA256SUMS.
+- HTTP MCP initialize and tools/list.
+- Scene open/read, node creation and save via MCP.
+- Runtime launch, 540x960 viewport, runtime probe, screenshot and stop.
+- Runtime method invocation reached the test button handler (not a touch-device test).
+- Valid main.gd accepted; deliberately malformed in-memory script rejected.
+- Codex registration read back with codex mcp get.
+
+Known upstream limitations observed:
+- Release/plugin.cfg says 1.0.8, CLI doctor says 1.0.7, MCP initialize says 2.0.0.
+  Use the pinned release hashes for provenance.
+- Initial import shutdown reported ObjectDB/resource cleanup warnings.
+- Error validation returns generic syntax diagnostics and logs intentional
+  test errors; no malformed test file was saved in the project.
+- Native tool exposure in this already-running Codex chat awaits reload.
+- Android/iOS exports and real touch-device latency have not been tested.
+
+Do not upgrade the plugin automatically. Re-run the connection checks after
+any deliberate upgrade. Keep editor automation excluded from release builds
+when export presets are added, and check the runtime probe's export behavior.

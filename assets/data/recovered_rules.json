@@ -1,0 +1,6430 @@
+{
+  "provenance": "ROM traces and decoded Glass Joe scheduling data; see research/RECOVERY_UPDATE.txt",
+  "player": {
+    "left_body": {
+      "state": 9,
+      "duration": 34,
+      "contact_at": 11,
+      "defense": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "force": 5,
+      "target": 2
+    },
+    "right_body": {
+      "state": 10,
+      "duration": 32,
+      "contact_at": 9,
+      "defense": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "force": 4,
+      "target": 3
+    },
+    "left_head": {
+      "state": 11,
+      "duration": 39,
+      "contact_at": 10,
+      "defense": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "force": 5,
+      "target": 0
+    },
+    "right_head": {
+      "state": 12,
+      "duration": 39,
+      "contact_at": 10,
+      "defense": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "force": 5,
+      "target": 1
+    },
+    "dodge_left": {
+      "state": 5,
+      "duration": 34,
+      "contact_at": -1,
+      "defense": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "dodge_right": {
+      "state": 3,
+      "duration": 35,
+      "contact_at": -1,
+      "defense": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "down": {
+      "state": 7,
+      "duration": 15,
+      "contact_at": -1,
+      "defense": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    "special": {
+      "state": 13,
+      "duration": 88,
+      "contact_at": 43,
+      "defense": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "force": 15,
+      "target": 0
+    }
+  },
+  "opponent": {
+    "jab": {
+      "state": 21,
+      "duration": 85,
+      "contact_at": 44,
+      "track": [
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        }
+      ]
+    },
+    "cross": {
+      "state": 22,
+      "duration": 97,
+      "contact_at": 58,
+      "track": [
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        }
+      ]
+    },
+    "taunt_long": {
+      "state": 25,
+      "duration": 163,
+      "contact_at": -1,
+      "track": [
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 255,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 255,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 255,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 255,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        }
+      ]
+    },
+    "taunt_short": {
+      "state": 25,
+      "duration": 134,
+      "contact_at": -1,
+      "track": [
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": true
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "ko": 0,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 255,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 255,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 255,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 255,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 1,
+          "clock_pause": false
+        },
+        {
+          "defense": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ko": 0,
+          "clock_pause": false
+        }
+      ]
+    }
+  },
+  "schedules": {
+    "normal": {
+      "0": {
+        "op": "enable",
+        "next": 1
+      },
+      "1": {
+        "op": "wait",
+        "frames": 64,
+        "next": 3
+      },
+      "3": {
+        "op": "branch",
+        "threshold": 10,
+        "target": 15,
+        "next": 5
+      },
+      "5": {
+        "op": "attack",
+        "id": 21,
+        "delay": 4,
+        "next": 7
+      },
+      "7": {
+        "op": "wait",
+        "frames": 60,
+        "next": 8
+      },
+      "8": {
+        "op": "attack",
+        "id": 22,
+        "delay": 4,
+        "next": 10
+      },
+      "10": {
+        "op": "wait",
+        "frames": 28,
+        "next": 11
+      },
+      "11": {
+        "op": "attack",
+        "id": 21,
+        "delay": 4,
+        "next": 13
+      },
+      "13": {
+        "op": "branch",
+        "threshold": 15,
+        "target": 23,
+        "next": 15
+      },
+      "15": {
+        "op": "attack",
+        "id": 21,
+        "delay": 4,
+        "next": 17
+      },
+      "17": {
+        "op": "wait",
+        "frames": 60,
+        "next": 18
+      },
+      "18": {
+        "op": "attack",
+        "id": 21,
+        "delay": 4,
+        "next": 20
+      },
+      "20": {
+        "op": "wait",
+        "frames": 60,
+        "next": 21
+      },
+      "21": {
+        "op": "attack",
+        "id": 21,
+        "delay": 4,
+        "next": 23
+      },
+      "23": {
+        "op": "wait",
+        "frames": 28,
+        "next": 24
+      },
+      "24": {
+        "op": "branch",
+        "threshold": 8,
+        "target": 1,
+        "next": 26
+      },
+      "26": {
+        "op": "wait",
+        "frames": 128,
+        "next": 28
+      },
+      "28": {
+        "op": "branch",
+        "threshold": 15,
+        "target": 1,
+        "next": 30
+      }
+    },
+    "fast": {
+      "0": {
+        "op": "enable",
+        "next": 1
+      },
+      "1": {
+        "op": "wait",
+        "frames": 32,
+        "next": 3
+      },
+      "3": {
+        "op": "branch",
+        "threshold": 10,
+        "target": 15,
+        "next": 5
+      },
+      "5": {
+        "op": "attack",
+        "id": 21,
+        "delay": 4,
+        "next": 7
+      },
+      "7": {
+        "op": "wait",
+        "frames": 28,
+        "next": 8
+      },
+      "8": {
+        "op": "attack",
+        "id": 21,
+        "delay": 4,
+        "next": 10
+      },
+      "10": {
+        "op": "wait",
+        "frames": 12,
+        "next": 11
+      },
+      "11": {
+        "op": "attack",
+        "id": 22,
+        "delay": 4,
+        "next": 13
+      },
+      "13": {
+        "op": "branch",
+        "threshold": 15,
+        "target": 23,
+        "next": 15
+      },
+      "15": {
+        "op": "attack",
+        "id": 21,
+        "delay": 4,
+        "next": 17
+      },
+      "17": {
+        "op": "wait",
+        "frames": 28,
+        "next": 18
+      },
+      "18": {
+        "op": "attack",
+        "id": 22,
+        "delay": 4,
+        "next": 20
+      },
+      "20": {
+        "op": "wait",
+        "frames": 28,
+        "next": 21
+      },
+      "21": {
+        "op": "attack",
+        "id": 21,
+        "delay": 4,
+        "next": 23
+      },
+      "23": {
+        "op": "wait",
+        "frames": 28,
+        "next": 24
+      },
+      "24": {
+        "op": "branch",
+        "threshold": 8,
+        "target": 1,
+        "next": 26
+      },
+      "26": {
+        "op": "wait",
+        "frames": 32,
+        "next": 28
+      },
+      "28": {
+        "op": "branch",
+        "threshold": 15,
+        "target": 1,
+        "next": 30
+      }
+    },
+    "tired": {
+      "0": {
+        "op": "enable",
+        "next": 1
+      },
+      "1": {
+        "op": "wait",
+        "frames": 8,
+        "next": 2
+      },
+      "2": {
+        "op": "attack",
+        "id": 21,
+        "delay": 12,
+        "next": 4
+      },
+      "4": {
+        "op": "attack",
+        "id": 21,
+        "delay": 8,
+        "next": 6
+      },
+      "6": {
+        "op": "attack",
+        "id": 21,
+        "delay": 8,
+        "next": 8
+      },
+      "8": {
+        "op": "branch",
+        "threshold": 15,
+        "target": 1,
+        "next": 10
+      }
+    }
+  },
+  "opponent_getup_counts": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    3,
+    4
+  ],
+  "player_getup_tables": [
+    [
+      7,
+      37,
+      57,
+      37,
+      57,
+      37,
+      57,
+      37,
+      57,
+      37
+    ],
+    [
+      7,
+      18,
+      38,
+      18,
+      38,
+      18,
+      38,
+      18,
+      38,
+      18
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+HISTORICAL DOCUMENT - superseded as current guidance on 2026-10-21.
+Current handoff: docs/CURRENT_STATE.md
+Architecture, art decisions and development commands: see README.md.
+The original text below is retained as historical evidence and may contradict current code.
+
+PUNCH TAP! - PLAYABLE RECOVERED FIRST FIGHT
+=========================================
+Open project.godot in Godot 4.7.2 and press F5, or run:
+  powershell -ExecutionPolicy Bypass -File .\tools\play.ps1
+
+Mobile: left joystick, LEFT and RIGHT punches, SPECIAL.
+Joystick up + punch = head; neutral + punch = body; down = guard;
+sides = slip. Release and tap again for another action.
+Keyboard: J/K punch, W aim high, S guard, A/D slip, Space special.
+Enter starts/resumes/rematches; Escape pauses; SFX toggles sound.
+
+Idle head shots land; body shots need an opening. Watch the taunt and guard.
+Slips take six frames to become protective, so react before contact.
+Hearts are not regenerating stamina: blocked shots cost one, hits taken cost
+three. If exhausted, evade to recover hearts. Stars power the delayed uppercut;
+one star is sufficient. Stars come from qualifying hits, not three counters.
+When knocked down, repeatedly tap the punch buttons once the get-up cue appears.
+Three knockdowns in one round cause TKO. Ordinary knockdowns can recover.
+After three rounds, 5,000 points wins the decision.
+
+The game uses measured first-opponent mechanics and original Nico Reyes art.
+Full animation bytecode and NES RNG are not yet ported; whole-bout frame parity
+is not claimed. See research/RECOVERY_UPDATE.txt for evidence and limitations.
+Windows playable verified; Android/iOS export and real-device testing remain.
+
+Checks:
+  godot --headless --path . --script res://tests/combat_test.gd
+  godot --headless --path . --script res://tests/ui_test.gd
+  godot --headless --path . --script res://tests/recovered_actions_test.gd

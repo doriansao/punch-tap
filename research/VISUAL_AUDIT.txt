@@ -1,0 +1,52 @@
+HISTORICAL DOCUMENT - superseded as current guidance on 2026-10-21.
+Current handoff: ../docs/CURRENT_STATE.md
+Architecture, art decisions and development commands: see ../README.md.
+The original text below is retained as historical evidence and may contradict current code.
+
+VISUAL RECONSTRUCTION CORRECTION - 20 OCTOBER 2026
+
+The earlier playable misrepresented the requested presentation: it used a
+three-quarter opponent and detached foreground gloves. It did not reconstruct
+the original two-boxer composition. The generated eight-pose atlas was not a
+recovered animation system. Combat test counts never established visual parity.
+
+What actually exists: local ROM execution, RAM traces, bank-aware disassembly,
+layer-isolation captures, sampled action/contact windows and decoded portions
+of the opponent scheduler. These are reverse engineering, but not a complete
+reverse-engineered implementation. No claim is made that REA was executed.
+
+New reproducible evidence:
+  scripts/visual_audit.lua: ordinary inputs from cold boot, no RAM patches.
+  evidence/visual_audit/frames.csv: 1,106 endFrame records, 2295 through 3400.
+  evidence/visual_audit/2295.png ... 3400.png: every rendered frame, unchanged.
+  evidence/visual_audit/manifest.json: per-screenshot SHA256 plus RAM fields.
+  evidence/visual_audit/index.html: local frame-step viewer with state records.
+Reproduce: ./research/scripts/run-research.ps1 -Cases visual_audit
+Then: python research/scripts/build_visual_audit.py
+
+Recorded fields: player action $50, timer $52, cursor $53, script $54/$55,
+contact $58; opponent action $90, timer $92, cursor $93, script $94/$95,
+sprite sequence cursor $A5. A cursor value is NOT a global pose identifier.
+Original source screenshots stay in research, never in production assets.
+
+Composition: idle_2300 and the isolated background/sprite screenshots show
+the opponent facing toward the player; the smaller player is seen from behind
+in the foreground and overlaps the opponent. Action poses may rotate; this
+does not justify a permanently three-quarter ready view or first-person hands.
+Original opponent uses hardware sprites; player uses background tiles. Godot
+can replace those PPU layers with separately anchored original textures while
+preserving their visual relationship.
+
+Correction implemented: Nico frontal atlas; original male player Teo Cruz rear
+atlas; foreground full-body player rendering; smaller opponent rectangle and
+overlapping player composition. Original combat logic and controls retained.
+This is a provisional COMPOSITION correction, not finished animation recovery.
+
+Still incomplete: decode each relevant animation command/branch and tile pose;
+measure per-frame anchors, offsets and contact reach; map unique source poses
+to original artwork at matching durations. Current player pose selection uses
+an authored contact-adjacent display window. Dodge displacement, ready bob,
+attack reach, hit/knockdown transitions and opponent key-pose selection remain
+approximate. Eight original poses do not replace a complete recovered sequence.
+Before adding opponents/progression, prioritize this mapping and matched-frame
+validation. Avoid presenting a visual reskin of the prototype as a faithful port.

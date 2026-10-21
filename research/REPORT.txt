@@ -1,0 +1,266 @@
+HISTORICAL DOCUMENT - superseded as current guidance on 2026-10-21.
+Current handoff: ../docs/CURRENT_STATE.md
+Architecture, art decisions and development commands: see ../README.md.
+The original text below is retained as historical evidence and may contradict current code.
+
+HISTORICAL FIRST PASS - superseded by RECOVERY_UPDATE.txt.
+Its integration status and labels for RAM 0347/030B are obsolete.
+
+PUNCH TAP — ROM REVERSE-ENGINEERING REPORT
+20 October 2026
+
+RESULT
+
+Actual ROM analysis is now running locally. Mesen boots the supplied ROM,
+injects ordinary controller input, records RAM every video frame, traces
+memory writes with bank-aware CPU/PRG addresses, and captures graphics layers.
+A scripted input sequence defeated Glass Joe in the ROM and reached the
+victory screen. No RAM cheats or save-state patches were used.
+
+Two small Godot components implement measured behavior and pass comparisons
+against ROM captures. The existing playable fight is still an invented
+prototype, NOT a completed faithful port. Its opponent logic has not been
+silently relabeled as recovered code. See ../PROTOTYPE_STATUS.txt.
+
+IMPORTANT CORRECTION TO EARLIER NOTES
+
+The old punch-out-ai RAM notes confused opponent reactions with player actions.
+That error was initially inherited in this investigation, then disproven using
+graphics-layer isolation and the actual 6502 routines. The evidence headers
+and generated summary have been corrected; the original training project was
+not changed.
+
+  $0050 = player action/animation-script state
+  $0090 = opponent action/animation-script state
+  $00A5 = cursor into an opponent sprite sequence, NOT a global pose ID
+
+For example, $0090=13 after a head punch is an opponent reaction. It must NOT
+be used as the player's head-punch animation duration. Initial commentary
+calling these reaction timings player punch timings is superseded here.
+
+1. INPUT AND TOOL PROVENANCE
+
+ROM: G:\Programming\punch-out-ai\rom\punch-out.nes
+SHA-256: 60ef51f55f6addb7a1893f816aad75ee3e146dd646958a865d3bece5b429b600
+262,160 bytes; 16-byte iNES header; 128 KiB PRG; 128 KiB CHR; mapper 9.
+Mesen identifies NES NTSC / NES-PNROM / MMC2-L in its database.
+The commercial revision/title suffix has not been independently authenticated.
+
+Emulator: Mesen 2.1.1 Windows, portable settings inside research/tools/mesen.
+Disassembler: py65 1.2.0. No global emulator preferences were changed.
+Download/tool/configuration hashes: evidence/provenance.json.
+
+Mesen was selected because this task requires NES mapper-aware execution,
+controller automation, PPU inspection and instruction/memory callbacks.
+REA's raw 6502/Ghidra route is useful for static investigation, but is not the
+dynamic NES investigation performed here. No claim is made that REA was run.
+
+Primary tool sources consulted:
+https://github.com/SourMesen/Mesen2/releases/tag/2.1.1
+https://github.com/SourMesen/Mesen2/blob/master/UI/Utilities/TestRunner.cs
+https://github.com/SourMesen/Mesen2/blob/master/UI/Debugger/Documentation/LuaDocumentation.json
+https://github.com/SourMesen/Mesen2/blob/master/UI/Config/NesConfig.cs
+The consulted source files are saved under tools/. Master documentation may
+evolve; captured tool hashes and successful experiments identify this run.
+
+2. METHOD AND CONFIDENCE
+
+Each experiment starts from a cold boot. START is pulsed during menu entry;
+combat experiments stop those menu pulses before the fight. Input is injected
+through Mesen's inputPolled callback. Samples use endFrame, not an AI wrapper's
+frameskip or wall-clock time. Frame numbers are callback counts from startup.
+
+RAM captures contain consecutive 2,048-byte blocks beginning at frame 2295.
+The first nine cases end at frame 2600. They use input at frames 2300..2302,
+except hold_left, which holds A for 120 frames. Player action is first visible
+in the endFrame sample at 2302. That sampling/input offset is NOT treated as
+a universal mobile-input latency requirement.
+
+The left-head experiment was repeated: both complete 626,688-byte RAM captures
+have SHA-256 4f45c2bc18a046edcf4d5a7fed06071eee121f629b1c1db05b4adf0fb562f496.
+There are 18 complete RAM captures in verified_summary.json, including long
+idle, defense, repeated-fight and structure experiments.
+The complete winning fight was also repeated with extra instrumentation. Both
+RAM captures match: 7de2b91cf5697e4c235f1b6a7b1df3d1f3a66aeb883043650e2995c4d6c5faab.
+The checked-in PowerShell runner was independently exercised on left_head_repeat
+and reproduced the same capture hash.
+
+Memory-write callbacks run before writes. Mesen's reported CPU PC is already
+past the writing instruction in these captures. Example: logged PC $8522
+corresponds to STA $0390,X at $851F. Read-modify-write instructions also produce
+old-value and new-value writes; these are not two game events.
+
+PRG offsets exclude the 16-byte iNES header. Banked CPU addresses cannot be
+interpreted without their PRG offset. Linear disassembly files are exploratory:
+embedded tables can look like instructions. Only the cited, corroborated
+instruction ranges below have been interpreted as code.
+
+3. HOW THE GRAPHICS ACTUALLY WORK
+
+At frame 2300, disabling background rendering leaves Glass Joe on screen;
+disabling sprites leaves Little Mac, the ring and HUD. This directly establishes
+which rendering layer each fighter uses in this encounter.
+
+Evidence:
+  evidence/idle_2300.png                 normal composition
+  evidence/sprites_only_2300.png         opponent layer
+  evidence/background_only_2300.png      player/ring/HUD layer
+  evidence/idle_2300_oam.bin             256-byte hardware sprite memory
+  evidence/idle_2300_nametable.bin       2,048-byte background tile memory
+
+The PPU state reports 8x8 sprites, sprite pattern base $0000 and background
+pattern base $1000. The opponent is assembled from many small tiles; he is not
+one stored rectangular image. Sample OAM entries form tile rows at Y=85,93,
+101,... with X positions including 118,126,134,142, and per-tile attributes.
+
+At fixed CPU $C976 onward the opponent compositor reads a sequence, applies
+position offsets and writes the RAM OAM buffer around $020C/$020F. $C99C stores
+the sequence cursor into $A5. $D16E onward reads through ($A3),Y, updates that
+cursor, obtains tile-data pointers in $A6/$A7, and processes the tile commands.
+See evidence/animation_and_damage.txt.
+
+For Godot, preserve animation state, frame events, anchors and layering while
+replacing NES tile composition with original SpriteFrames/atlas artwork.
+There is no reason to recreate an MMC2 or PPU inside the mobile game. Original
+ROM graphics are research captures only; no captured tile art was added to
+the playable game's assets.
+
+4. ANIMATION AND INPUT STRUCTURE
+
+Player dispatch is in PRG bank 11:
+  CPU $8144/$815A select $89/$8A for body punches.
+  CPU $8148/$815E select $8B/$8C for head punches.
+  CPU $8182 writes the requested state to $50.
+  CPU $8164 checks $0342 before allowing the special-punch path.
+  CPU $82CC masks off bit 7, initializes script state, and resets counters.
+  CPU $82FD uses a state-indexed pointer table at $9800.
+  $54/$55 hold the player script pointer; $52 is a countdown; $53 is a cursor.
+See evidence/player_routines.txt and structure_writes.csv.
+
+Opponent dispatch has a similar high-bit initialization protocol at $C46B.
+It uses $94/$95 as the animation-script pointer, $92 as a timer and $93 as a
+cursor. The opponent's idle state is 1. Its scheduler at $B196-$B1A3 decrements
+$39 only when $38 is enabled and opponent state $90 equals 1. This explains
+why hit reactions can postpone ordinary attacks. Calling $39 a universal
+wall-clock attack timer would be incorrect.
+
+5. MEASURED PLAYER ACTIONS
+
+These are END-OF-FRAME state durations for the tested opening, normal stamina,
+and a short input pulse. They are not claims about every opponent, fatigue,
+held defensive input, interrupted animation or other round conditions.
+
+Input       Player state  Active-state frames  Then ready-init state
+A           9             34                   129 for 1 frame, then 1
+B           10            32                   129 for 1 frame, then 1
+UP+A        11            39                   129 for 1 frame, then 1
+UP+B        12            39                   129 for 1 frame, then 1
+LEFT        5             34                   129 for 1 frame, then 1
+RIGHT       3             35                   129 for 1 frame, then 1
+DOWN        7             15                   129 for 1 frame, then 1
+
+The $58 contact/event field becomes 1 for a body punch at action ages 11 or 9
+(left/right respectively), and 3 for head punches at age 10. The body punches
+in this specific opening did not damage Joe. Both head punches reduced his
+health 96 -> 91 and hearts 20 -> 19.
+
+Holding A for 120 frames produced one punch, not automatic repeat punching.
+That establishes a concrete requirement for touch controls: distinguish press
+edges from held buttons. The measured component models that tested behavior;
+buffering, simultaneous-input priority and all hold/release cases remain open.
+
+6. DEFENSE, SPECIAL AND FIRST FIGHT
+
+In the idle control, the first damaging attack occurred at frame 3007 and
+reduced player health 96 -> 85. A three-frame LEFT pulse at 2990 avoided it.
+The same RIGHT pulse also avoided it. Holding DOWN for 40 frames beginning
+at 2990 reduced the hit to 2 damage (96 -> 94), with a distinct block reaction.
+START with zero stars did not launch an uppercut; the player took the full hit.
+
+Consequences for the port:
+  - Do not retain the prototype's invented left-only/right-only dodge rule
+    for this recovered attack.
+  - Blocking and dodging are separate states with separate outcomes.
+  - Do not keep the prototype's regenerating 100-point stamina/charge rules
+    and describe them as recovered hearts or stars.
+
+fight_policy.lua alternates UP+A and UP+B for three frames every 55 frames.
+It would press START if a star were available, but stars stayed zero throughout
+this run. It reached the ROM's actual "YOU WON BY KO!" screen. The screenshot
+reports round 1, 0:42.25. Player health remained 96.
+
+Nine ordinary contacts dealt 5 damage each. At frame 2917 a contact reduced
+the remaining 51 opponent health directly to zero. Instruction tracing proves
+this is a separate branch, not a very strong normal punch:
+
+  PRG bank 7, CPU $8335 (PRG $0E335): load $BA
+  $8337: branch to ordinary path if zero
+  $8339-$833B: otherwise load zero and store to $0398
+
+At the branch, frame 2916: $BA=255, opponent HP=51, player contact code=3.
+See evidence/knockout_condition.txt and knockout_routines.txt.
+The confirmed-contact Godot function implements this narrow rule.
+
+The knockout opportunity is dynamic: in the idle run $BA first became nonzero
+at frame 2943, while the punch-policy run reached it at 2914. Therefore the
+mobile game must NOT hard-code a universal "KO at frame 2917" event.
+Recovery of the script that opens/closes this window is still required.
+
+7. GODOT WORK COMPLETED AND TESTED
+
+../scripts/recovered/player_action.gd
+  Independent measured action timeline and press-edge behavior. No rendering
+  dependencies; intended for fixed simulation ticks. Contact is an event,
+  not an immediate damage decision on button-down.
+
+../scripts/recovered/head_contact.gd
+  Narrow confirmed-contact branch: an active knockout window overrides normal
+  damage. It is NOT a complete collision, invulnerability or damage resolver.
+
+../tests/recovered_actions_test.gd
+  Compares the action component against sampled $50 and $58 for every frame
+  of eight ROM experiments: 4,896 comparisons passed. Also checks ten recorded
+  head contacts, including the direct-to-zero branch. Fixtures come from RAM
+  capture scripts, not from the implementation being tested.
+
+These are measured behavioral slices, not a full translation of the ROM's
+animation bytecode interpreter. Fixed profile lengths are deliberately scoped
+to the tested conditions. Do not generalize them before additional traces.
+
+8. WHAT STILL HAS TO BE RECOVERED BEFORE REPLACING THE MAIN FIGHT
+
+  - Full opponent scheduler/script interpretation, including conditions and
+    randomness, the dynamic knockout window, attack/contact windows and counters.
+  - Star acquisition and uppercut timings with nonzero stars; hearts exhaustion.
+  - Complete collision/vulnerability rules, interrupted actions, input priority,
+    defensive holds, dodge cancellation and double-tap behavior.
+  - Knockdown/get-up/countout logic across multiple outcomes and round changes.
+  - Player/opponent pose timelines and anchors sufficient for original artwork.
+
+The new art needs readable guard, windup, contact, recovery, hit, block, dodge,
+knockdown and get-up poses aligned with simulation events. The existing six-pose
+sheet cannot yet be declared sufficient. Art replacement alone does not make
+the old prototype a port.
+
+9. REPRODUCE
+
+From G:\Programming\punch-tap:
+  python research/scripts/make_experiments.py
+  ./research/scripts/run-research.ps1
+
+Additional checked-in experiments can be selected with -Cases, for example:
+  ./research/scripts/run-research.ps1 -Cases idle_long,fight_policy,fight_policy_confirm
+  ./research/scripts/run-research.ps1 -Cases sprites_only,background_only
+
+Then regenerate summaries/fixtures:
+  python research/scripts/summarize.py
+  python research/scripts/build_fixtures.py
+  python research/scripts/build_contact_fixtures.py
+
+Run the measured Godot checks:
+  & 'G:\Programming\Tools\Godot\Godot_v4.7.2-stable_mono_win64_console.exe' --headless --path 'G:\Programming\punch-tap' --script res://tests/recovered_actions_test.gd
+
+research/.gdignore keeps the investigation out of Godot imports. Tool binaries,
+ROM-derived binary dumps and screenshots are excluded from Git. The original
+ROM remains at its original path and is not part of the mobile game.
+

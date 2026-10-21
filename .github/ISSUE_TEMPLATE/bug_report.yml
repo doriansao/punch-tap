@@ -1,0 +1,22 @@
+name: Bug report
+description: Report a reproducible gameplay, rendering or tooling issue.
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Godot version, operating system, commit and input device.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps, expected behavior and actual behavior
+      description: Include action timing where relevant. Do not attach ROMs, memory dumps, extracted game assets or secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Validation context
+      description: Was this the live game, legacy model, a replay or a routine fixture?

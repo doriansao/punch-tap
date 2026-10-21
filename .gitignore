@@ -1,0 +1,55 @@
+# Godot caches and exported builds (keep .uid and .import settings)
+/.godot/
+/.mono/
+/builds/
+/exports/
+export_credentials.cfg
+*.apk
+*.aab
+*.ipa
+*.pck
+
+# Local tools, downloads, emulator output and research captures
+/.setup/
+/tools/gdmcp/
+/research/tools/
+/research/evidence/
+*.nes
+*.fds
+*.rom
+*.sav
+*.state
+*.mss
+*.bin
+*.exe
+*.dll
+*.zip
+*.7z
+
+# Credentials and signing material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+*.mobileprovision
+
+# Python/editor/OS scratch files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.vscode/
+.idea/
+*.log
+*.err
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db

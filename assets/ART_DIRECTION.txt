@@ -1,0 +1,73 @@
+ACTIVE VISUAL CORRECTION: nico_front.png + teo_rear.png.
+See FRONT_REAR_ART.txt for prompts; earlier atlas notes below are historical.
+
+CURRENT ART: Nico 'Rivet' Reyes, original male boxer.
+Active sprite: nico_rivet.png. Prompt/provenance: NICO_ART.txt.
+Mara assets and text below are historical production notes, not active art.
+
+PUNCH TAP! ORIGINAL ART - 2026-10-20
+==================================
+
+Final asset: mara_sheet.png (1536 x 1024 RGBA), 3 columns x 2 rows.
+Row-major poses: ready, jab anticipation, jab, power cross, hit reaction, kneel.
+Mara "Switch" Vale is a fictional adult boxer. No franchise references supplied.
+The runtime samples atlas regions without modifying the generated PNG.
+Arena, foreground gloves, HUD and menus are original Godot drawing/UI code.
+The game synthesizes its own short sound effects; no sampled game audio used.
+
+Tool: built-in image_gen (not API/CLI fallback).
+Final asset is the second, background-removal pass. Transparent corner and
+interstitial pixels were verified (alpha=0), and the in-game composite inspected.
+These are key poses, not a finished frame-by-frame animation. The anticipation
+and power-cross poses are currently stylized directional tells; animation
+refinement should preserve gameplay timing independently from art frames.
+
+Generation prompt
+-----------------
+Create a production game sprite sheet for an ORIGINAL fictional boxing game
+Punch Tap!, no existing franchise characters or visual references. Asset type:
+transparent RGBA sprite sheet, 1536x1024 landscape, exact uniform 3 columns x
+2 rows grid (6 cells), no grid lines and no labels. SAME character in every
+cell at identical scale with baseline feet aligned: Mara 'Switch' Vale,
+adult female athletic boxer, medium brown skin, short asymmetrical dark hair
+with mint dyed streak, coral red padded boxing gloves, midnight navy sleeveless
+athletic crop top with mint piping, navy boxing shorts with coral diagonal bands,
+mint ankle-high boxing boots. Distinct angular expressive face, confident focused
+expression. Full body front-facing three-quarter boxing stance, from head to
+shoes wholly inside EACH cell with generous transparent margins. Bold hand-inked
+editorial comic shapes with gouache shading, clean silhouettes, limited midnight
+navy/coral/mint/cream palette, no pixel art, no logos. Six poses row major:
+1 ready stance both gloves raised; 2 quick jab wind-up glove lifted at shoulder;
+3 jab toward viewer foreshortened glove; 4 heavy cross wind-up twisting torso;
+5 hit reaction recoiling with eyes squeezed; 6 exhausted knockdown kneeling on
+one knee gloves low. Keep anatomy, costume, color, proportions consistent.
+All 6 poses separate with no overlap between grid cells. Transparent background
+absolutely no backdrop, no floor, no text, no watermark.
+
+Final editing prompt
+--------------------
+Edit this exact six-pose character sprite sheet. Remove ALL the colored
+gradients, dark backgrounds, floor shadows and colored glows between and around
+the figures. Output genuine transparent alpha outside the six character
+silhouettes, no backdrop whatsoever. Preserve the exact 1536x1024 canvas, the
+identical three columns and two rows arrangement, character size, colors, faces,
+clothing and poses. Do not move, redraw, enlarge or crop any figure. This is
+background removal only for a production game sprite sheet.
+
+RECOVERY INTEGRATION ART UPDATE - 20 OCTOBER 2026
+Active asset: mara_recovered_v2.png, 1536x1024 RGBA, eight original poses.
+Ready, taunt, jab anticipation, contact, guard, recoil, kneel, rising.
+Generated with built-in image_gen using our original Mara design as reference.
+No ROM sprites or franchise character references were supplied.
+Generation requested consistent comic ink/shading, coral gloves, navy/mint
+outfit, short dark hair with mint streak, transparent background, four columns
+and two rows, separate full-body poses. Layout revision requested 48px margins
+and no cross-cell overlap. Actual output still has irregular spacing, so the
+runtime uses explicit source regions instead of assuming a uniform grid.
+PNG was copied unchanged; alpha and in-game composite were inspected.
+Original output: exec-a1afe9fc-5ca8-41b0-8829-63ba5cbd7a1a.png in the Codex
+ generated_images/01a15b14-61c7-7f92-9542-b6df20c2c7b4 directory.
+Eight key poses plus movement/tint are not finished frame-by-frame animation.
+Earlier six-pose asset and prompts above are retained as production history.
+
+

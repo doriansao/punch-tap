@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/yurineko73/Godot-MCP-Native",
+  "release": "v1.0.8",
+  "plugin_archive_sha256": "ECABDC3374B461A9611EDCE89F5971F769A5C98A39CCA72D9811EE6E8D661D6A",
+  "cli_archive_sha256": "682A3368556844FFA754778A2246335BCAD4368E3CF4D1005AD5978C54247BF8",
+  "cli_executable_sha256": "DED6ED07E9C565A54C4CF644BD3F1A9D52707CEF7AA34BBA1D4B8E0B90AFF0C7",
+  "local_patch": "Bind TCPServer.listen to 127.0.0.1",
+  "verified_engine": "4.7.2.stable.mono.official.ed1daf0bf"
+}

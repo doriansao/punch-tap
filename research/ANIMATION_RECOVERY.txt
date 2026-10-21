@@ -1,0 +1,131 @@
+HISTORICAL DOCUMENT - superseded as current guidance on 2026-10-21.
+Current handoff: ../docs/CURRENT_STATE.md
+Architecture, art decisions and development commands: see ../README.md.
+The original text below is retained as historical evidence and may contradict current code.
+
+ANIMATION RECOVERY AND COMPARISON - 20 OCTOBER 2026
+=================================================
+
+STATUS: SOURCE MEASUREMENT AND RENDER-TRACK INTEGRATION COMPLETE FOR THE
+CAPTURED CASES BELOW. FULL ANIMATION/ART PORT IS NOT COMPLETE.
+
+Open evidence/comparison/index.html locally for the comparison. Choose a clip,
+step individual frames or play at 60 Hz, and switch ROM graphics layers.
+The right panel renders our original characters using the selected measured
+track through the production Godot renderer. It is NOT a second independently
+played full fight with matching NES randomness. This distinction is essential.
+
+PROVENANCE
+Same local ROM SHA256 as RECOVERY_UPDATE.txt. Cold boot, ordinary pad input,
+no RAM patches. Four cases, each captured with full rendering, background-only
+player, and sprite-only opponent. All THREE RAM streams match byte for byte:
+  visual_audit:        2295..3400, 1106 frames
+  normal_knockdowns:   2295..7200, 4906 frames
+  player_getup_wide:   4000..4550,  551 frames
+  idle_long:          2295..3400, 1106 frames
+Total 7669 logical frames, three rendering passes (23007 source PNGs).
+Hashes: evidence/animation/validation.json.
+
+WHAT THE ROM ACTUALLY SELECTS
+Player bank 11 $8280..$82CB tests $60, reads pose selector $61, resolves
+tables $8800 / $88C4, and sets background update pointers $63/$64/$66/$67.
+$8319..$8335 decrements timer $52 and dispatches commands at ($54),$53.
+$8363 sets duration and pose; $8371 sets duration, pose and scroll $15;
+$837F adds a signed scroll offset; $838B branches conditionally through
+$85E2 using the random state. $83A7 supplies an extended wait.
+
+Opponent $C550 dispatches ($94),$93. $C58D sets duration and selector $A1;
+$C59B also sets absolute anchor $B0/$B1; $C5D4 applies packed displacement.
+$C830 applies the high nibble to X and low nibble to Y, sign-extending 4-bit
+values at $C847. $C5E6 supplies repeated movements. $C5F9 sets extended waits.
+$C890 resolves a selector to sequence $A3/$A4; $C976 composes sprites;
+$A5 is a sequence cursor, $A6/$A7 a tile-data pointer. None alone is a global
+pose ID. The comparison records sequence:cursor:tile-pointer keys.
+
+Live command-dispatch probes were added at player $8325 (checked PRG $16325)
+and opponent $C550. Output includes frame, script pointer, cursor, opcode,
+following operand bytes, prior pose and position:
+  visual_audit_commands.csv: 733 dispatches
+  normal_knockdowns_commands.csv: 7102 dispatches
+  player_getup_wide_commands.csv: 1382 dispatches
+These files are evidence, not a claim that all E/F subcommands and branches
+have been ported. The current Godot renderer consumes measured tracks.
+
+MEASURED TRACKS NOW EXPORTED TO GODOT
+left/right body 34/32 frames; left/right head 39/39; slips 34/35; guard 15;
+uppercut 88; initial jab 85; cross 97; taunt variants 163/134; reactions 28;
+sampled hurt 40; first ordinary opponent down/recovery 712; sampled player
+down/recovery 435; third opponent down/TKO 727; captured idle variant 503.
+19 clips, 3268 paired frame samples. Every sample retains its source case and
+absolute ROM frame. Render samples are not inferred from contact windows.
+
+Measured positions are VISIBLE pixel bounds, not collision boxes. Player
+measurement excludes HUD/ring outside x40..215/y90..239 and selects the
+connected fighter component near the captured center lane. This excludes the
+background-layer referee during knockdown counts. $61 in those intermission
+states can select referee/background updates, not just Mac poses. Opponent measurement
+uses sprites within +/-52 pixels of its anchor to exclude the distant referee.
+Visible off-screen clipping is retained. The uppermost glove-colour pixel row
+is recorded as a reach marker. It is not an independently decoded hitbox.
+Player layer uses palette RGB(92,228,48); opponent glove RGB(181,49,32).
+Normal background is RGB(21,95,217); a clear ring sample tracks its colour
+during fades, avoiding false full-screen actor bounds. Images are read, never
+edited for measurement. Offscreen extent is restored only when the visible
+mask exactly matches a prefix/suffix of a captured full silhouette. Art is
+then cropped at that extent instead of shrinking the entire body. Ambiguous
+extents are flagged in evidence/animation/clipping_validation.json.
+1595 actor samples had recoverable clipped extent; 55 player fall samples
+remain unresolved. They are visible measurements only, not full-body bounds.
+
+Example: visual_audit left head begins frame 2502. At frame 2512, contact=3,
+pose selector=31, scroll=166, player bounds=(124,111,22,81), uppermost green
+marker=(134,112). Idle frame2300 bounds=(107,154,24,61). This demonstrates
+the major upward reach/position change missing from the former animation.
+
+GODOT CHANGES
+scripts/recovered/animation_timeline.gd selects source samples by simulation
+age. main.gd no longer adds sine bob, anticipation shake, authored taunt
+scaling, linear dodge movement, or the contact-minus-five pose window.
+It maps measured NES coordinates into the portrait arena with one uniform
+2.8x coordinate transform and fits original-art regions into measured bounds.
+Get-up tails are selected after the live count/input-completion event; timing
+is not stretched to fit. Idle currently reuses a captured variant, not NES RNG.
+Existing controls and gameplay rules remain. Original art remains separate
+from ROM images; the production game requires neither ROM nor emulator.
+
+VALIDATION
+animation_tracks_test.gd independently rereads raw RAM and checks 3268 paired
+samples against player pose/scroll/contact, opponent sequence key and anchor:
+zero mismatches. UI/input tests: 21 pass; scripted bout still ends TKO with
+48 player HP, 8550 points and 10089 simulated frames.
+These checks do NOT certify all animation branches, all limb placements or
+independent whole-bout frame parity. Do not cite them as such.
+
+REMAINING WORK — NOT HIDDEN BEHIND A PASS LABEL
+1. Original artwork has eight poses per actor. The measured inventory has
+   many more selectors and rendered variants, including intermission states.
+   Current _art_pose correspondence is coarse and marked as such per frame.
+   Several source poses share art; walk, individual recoil/guard transitions,
+   punch anticipation/recovery and get-up silhouettes need distinct artwork.
+2. Fitting visible bounds does not recover an anatomical skeleton. No warped
+   body mesh is used to manufacture a glove match. Actual art glove-marker
+   error is displayed and saved in comparison/registration_errors.json.
+3. Full conditional animation bytecode execution, NES RNG and interruption
+   branch coverage remain. Recorded samples prove those observed paths only.
+   Live contact/reaction frame alignment must also be checked independently;
+   the clip-replay comparison cannot certify the game's event-dispatch phase.
+4. Artwork registration, complete sequence execution and live game validation
+   must pass before calling this a finished faithful animation port.
+
+REPRODUCE
+python research/scripts/capture_animation.py
+./research/scripts/capture-animation.ps1
+python research/scripts/measure_animation.py
+python research/scripts/recover_clipped_extents.py
+python research/scripts/export_animation_tracks.py
+python research/scripts/art_registration.py
+python research/scripts/trace_animation_commands.py
+./research/scripts/run-research.ps1 -Cases commands_visual_audit,commands_normal_knockdowns,commands_player_getup_wide
+godot --headless --path . --script res://tests/animation_tracks_test.gd
+godot --path . --script res://tests/animation_comparison.gd
+python research/scripts/build_animation_comparison.py

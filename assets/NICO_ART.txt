@@ -1,0 +1,10 @@
+NICO 'RIVET' REYES - ORIGINAL MALE BOXER
+Active asset: nico_rivet.png. Built-in image_gen; no CLI/API fallback.
+1536x1024 RGBA; eight key poses, source PNG copied without image editing.
+Source: exec-67ca628d-f1ec-44f4-a3ba-500c91b9f80c.png in Codex generated_images.
+Runtime regions: scripts/opponent_identity.gd. Previous Mara assets are
+historical files only and are not loaded by the active fight.
+This atlas supplies key poses, not a complete frame-by-frame animation set.
+
+FINAL GENERATION PROMPT
+Use case: stylized-concept. Create a production transparent sprite atlas for original mobile boxing game Punch Tap! Subject: ONE consistent original adult MALE boxer Nico 'Rivet' Reyes, sturdy athletic build, warm brown skin, close cropped curly black hair, strong eyebrows, short square beard, expressive angular face, coral boxing gloves, sleeveless navy boxing vest with mint side panels, navy boxing shorts with copper-orange waistband, mint boxing boots. Bold comic ink outlines and restrained painted shading matching a navy/coral/mint rooftop boxing game. No franchise characters or references. 1536x1024 canvas arranged exact FOUR columns TWO rows, eight separate full-body poses with same character identity and scale. Each cell384x512; IMPORTANT generous 48px empty transparent margins on EVERY side of EACH cell, shrink boxer to fit, no limb crosses cell boundaries. All silhouettes fit within their own cell. Row1: ready guard; cocky taunt with lowered gloves; jab anticipation; foreshortened straight punch toward camera. Row2: high guard both gloves covering face; recoiling from hit; knocked down on one knee gloves low; rising from one knee lifting his guard. Keep entire head and feet visible, feet baseline consistent except kneeling. Genuine alpha transparent background everywhere outside silhouettes, no scenery, no floor shadows, no glow, no grid, no labels or text.

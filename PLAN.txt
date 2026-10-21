@@ -1,0 +1,40 @@
+HISTORICAL DOCUMENT - superseded as current guidance on 2026-10-21.
+Current handoff: docs/CURRENT_STATE.md
+Architecture, art decisions and development commands: see README.md.
+The original text below is retained as historical evidence and may contradict current code.
+
+PRIORITY: Complete animation bytecode/branch and original pose correspondence
+before adding opponents or progression. Nineteen measured render clips are
+now integrated; art correspondence remains coarse. Source/Godot comparison:
+research/evidence/comparison/index.html. See research/ANIMATION_RECOVERY.txt.
+
+PUNCH TAP! - WORKING CHECKLIST (2026-10-20)
+
+[DONE] Godot portrait 9:16 first playable fight.
+[DONE] Reproducible ROM capture, disassembly and behavioral evidence pipeline.
+[DONE] Integrated measured first-opponent schedules, defense and action timings.
+[DONE] Hearts/exhaustion, stars, delayed uppercut, knockdowns, get-ups, TKO,
+       rounds, score and decision threshold.
+[DONE] Mobile joystick, separate left/right punches, special, multitouch input.
+[DONE] Original male boxer Nico 'Rivet' Reyes with eight generated sprite poses.
+[DONE] Live score and per-round knockdown counts in the HUD.
+[DONE] Automated combat/input checks and input-driven complete TKO bout.
+
+[PARTIAL] Faithful ROM behavior: sampled tracks work, but full conditional
+          animation logic, NES RNG and whole-bout frame parity remain.
+[PARTIAL] Animation: ROM-measured sequences, visible bounds, motion and reach
+          replace authored bob/tween offsets. Eight original poses per actor
+          still alias many source poses; full pose/branch mapping is not done.
+
+[NEXT] Recover remaining conditional branches/RNG and compare matched replays.
+[TODO] Human playtest difficulty/readability and tune original presentation.
+[TODO] More original male opponents with distinct patterns and special skills.
+[TODO] Circuit/progression, save data, settings and tutorial polish.
+[TODO] Android export, physical-device multitouch, safe-area/performance QA.
+[TODO] iOS export/signing and physical-device QA, then store packaging.
+
+Art direction preference: original male boxers for this project. Keep ROM
+graphics/audio out of production assets. Art swaps must preserve mechanics.
+Current stage: first playable behavioral port; not a complete game or a
+frame-perfect NES port. Recovery details: research/RECOVERY_UPDATE.txt.
+
