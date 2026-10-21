@@ -14,6 +14,8 @@ Read [current state](docs/CURRENT_STATE.md) first. Read [architecture](docs/ARCH
 
 ## Documentation maintenance
 
+- Run validation locally before pushing. Do not create or enable GitHub Actions workflows or other hosted CI unless the user explicitly requests it. Keep the local documentation checker and applicable game tests.
+
 - Markdown in `docs/` is the current handoff. Older `.txt` reports and logs are historical evidence, not current status.
 - Give each fact one owner: architecture for structure, current state for blockers/next actions, art direction for visual decisions, recovery for evidence, development for commands.
 - Update the owning document in the same work session when behavior, approved decisions, blockers, setup, or validation changes. Update current state before handing off unfinished work.

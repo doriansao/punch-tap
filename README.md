@@ -30,7 +30,7 @@ Read [repository rules](AGENTS.md), then [current state](docs/CURRENT_STATE.md).
 
 ## Contributing and repository scope
 
-Read [contribution guidelines](CONTRIBUTING.md). Source, original art, numeric runtime data and research scripts are included. ROMs, extracted graphics/audio, emulator captures, local binaries and credentials are excluded. Evidence-dependent tests need local fixtures; CI checks documentation only.
+Read [contribution guidelines](CONTRIBUTING.md). Source, original art, numeric runtime data and research scripts are included. ROMs, extracted graphics/audio, emulator captures, local binaries and credentials are excluded. Run documentation checks and applicable game tests locally before pushing. No GitHub Actions workflows are configured; evidence-dependent tests need local fixtures.
 
 No project-wide open-source license has been selected. Public visibility does not grant a separate project reuse license. Bundled components retain their own terms; see [third-party notices](THIRD_PARTY_NOTICES.md). This project is not affiliated with or endorsed by Nintendo.
 

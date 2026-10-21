@@ -23,7 +23,7 @@ python tools/check_docs.py
 
 Use a bounded process timeout when running new tests; parse errors in SceneTree tests can leave a process running. Import new textures with a headless editor import before rendering them. Avoid unbounded terminal output.
 
-On a fresh clone, create `research/evidence/` for logs. Emulator captures and research binaries are intentionally absent; fixture-based routine tests need those local inputs. Research scripts retain workstation-specific paths and require configuration. Documentation CI runs without a ROM and does not claim gameplay validation.
+On a fresh clone, create `research/evidence/` for logs. Emulator captures and research binaries are intentionally absent; fixture-based routine tests need those local inputs. Research scripts retain workstation-specific paths and require configuration. Run documentation checks and applicable game tests locally before pushing; do not add hosted CI without an explicit user request.
 
 Choose tests by changed boundary:
 
