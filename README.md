@@ -4,7 +4,7 @@ Original portrait boxing game in Godot, using reverse engineering of a locally s
 
 ![Approved Punch Tap character concept](assets/cartoon/approved_concept.png)
 
-Small underdog Teo Cruz faces oversized Nico “Rivet” Reyes. The approved cartoon art direction is shown above; the running build still uses earlier sprites. Android and iOS are targets, not released platforms.
+Small underdog Teo Cruz faces oversized Nico “Rivet” Reyes. The approved cartoon art direction is shown above; the running build now uses cartoon pose atlases based on these references. Android and iOS are targets, not released platforms.
 
 ## Run locally
 
@@ -14,7 +14,7 @@ Small underdog Teo Cruz faces oversized Nico “Rivet” Reyes. The approved car
 
 The game runs without a ROM. Research tools require separately supplied local inputs and are not a turnkey reproduction pipeline.
 
-**Known blocker:** the current live adapter can stall during a later opponent knockdown. Full-bout parity and mobile-device validation remain unfinished. See current state below.
+**Work in progress:** the first opponent supports tested natural KO/TKO bouts, but full-bout ROM parity, remaining visual reach differences and mobile-device validation are unfinished. See current state below.
 
 ## Start here
 
@@ -26,11 +26,12 @@ Read [repository rules](AGENTS.md), then [current state](docs/CURRENT_STATE.md).
 | [Architecture](docs/ARCHITECTURE.md) | Runtime boundaries and data flow |
 | [Art direction](docs/ART_DIRECTION.md) | Approved characters, proportions, asset status |
 | [Recovery evidence](docs/RECOVERY.md) | ROM provenance, recovery pipeline, validation limits |
+| [Animation comparison](docs/ANIMATION_AUDIT.md) | Full-rate motion audit and original-art registration |
 | [Development](docs/DEVELOPMENT.md) | Local setup, controls, checks |
 
 ## Contributing and repository scope
 
-Read [contribution guidelines](CONTRIBUTING.md). Source, original art, numeric runtime data and research scripts are included. ROMs, extracted graphics/audio, emulator captures, local binaries and credentials are excluded. Run documentation checks and applicable game tests locally before pushing. No GitHub Actions workflows are configured; evidence-dependent tests need local fixtures.
+Read [contribution guidelines](CONTRIBUTING.md). Source, original art, decoded gameplay operations, numeric runtime data and research scripts are included. ROMs, extracted graphics/audio, emulator captures, local binaries and credentials are excluded. Run documentation checks and applicable game tests locally before pushing. No GitHub Actions workflows are configured; evidence-dependent tests need local fixtures.
 
 No project-wide open-source license has been selected. Public visibility does not grant a separate project reuse license. Bundled components retain their own terms; see [third-party notices](THIRD_PARTY_NOTICES.md). This project is not affiliated with or endorsed by Nintendo.
 

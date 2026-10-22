@@ -26,6 +26,17 @@ for case,t in measure.items():
   p=row['opponent']
   if not p['box']or p['mask_hash']in seen:continue
   seen.add(p['mask_hash']);x,y,w,h=p['box'];im=np.array(Image.open(root/case/'opponent'/f'{row["frame"]}.png').convert('RGB'));a,_=component(np.any(im[y:y+h,x:x+w]!=im[200,16],axis=2));known[digest(a)]={k:p[k]for k in ['art_frame','art_flip','visual_pose_id']}
+# Reviewed offline ROM selector 12: chin-up combo recoil, gloves at waist.
+# ROM selector 28 after the raised-arm body: compact high-guard silhouette.
+# Geometry/transition is ROM-executed; replacement artwork is authored.
+known['c7ae710ccb7031ac']={'art_frame':3,'art_flip':False,'visual_pose_id':49}
+known['cb2c45fb0da01081']={'art_frame':11,'art_flip':False,'visual_pose_id':48}
+# Reviewed source IDs 23/32 lower one glove; neither is a high knee lift.
+for shape in ['968a003b63bebefb','f5ff2db92872695a']:
+ if shape in known: known[shape]['art_frame']=29
+# Reviewed body-block composition only; other idle art aliases stay unchanged.
+known['bd7da4410430e979']={'art_frame':40,'art_flip':False,'visual_pose_id':1}
+known['bdcc71a94e6f3f95']={'art_frame':41,'art_flip':False,'visual_pose_id':25}
 cache={};geometry={};transitions=collections.defaultdict(set);full=collections.defaultdict(set);unknown={};counts=collections.Counter();initial=None;representatives={};relative_variants=collections.defaultdict(set)
 out=root/'compositor_unmapped';out.mkdir(exist_ok=True)
 def pose(m):
@@ -64,8 +75,9 @@ print('relative geometry conflicts',[(k,len(v),sorted(v))for k,v in relative_var
 from py65.devices.mpu6502 import MPU
 program=Path('G:/Programming/punch-out-ai/rom/punch-out.nes').read_bytes()[16:131088]
 expanded=0
+expanded_fixtures=[]
 for before,ram in representatives.items():
- for selector in [128,130,192,194,196,198,200,202,204]:
+ for selector in list(range(0,60,2))+[128,130,192,194,196,198,200,202,204]:
   key=f'{before}:{selector}:0'
   if key in transitions:continue
   mm=list(ram)+[0]*63488;mm[0x8000:0xa000]=program[:8192];mm[0xa000:]=program[-0x6000:];mm[0xa0]=128;mm[0xa1]=selector;mm[0xa2]=0;mm[0x1fe]=254;mm[0x1ff]=127
@@ -75,8 +87,26 @@ for before,ram in representatives.items():
    cpu.step()
   else:continue
   result,box=pose(bytes(mm[:2048]))
+  if result in known and result not in geometry and box:
+   geometry[result]={'relative_box':[box[0]-mm[0xb0],box[1]-mm[0xb1],box[2],box[3]],**known[result]}
+  if before=='3a993b6d203e6938' and selector==12:
+   print('combo-transition',key,result,box,flush=True)
+   # Local diagnostic decoding of ROM tiles, excluded from production assets.
+   diagnostic=np.zeros((256,256),dtype=np.uint8)
+   for j in range(0x20c,0x300,4):
+    sy,t,attr,sx=mm[j:j+4];sy+=1
+    if sy>=240:continue
+    tile=tiles[mm[0xa9],t]
+    if attr&128:tile=tile[::-1]
+    if attr&64:tile=tile[:,::-1]
+    h=min(8,256-sy);w=min(8,256-sx)
+    target=diagnostic[sy:sy+h,sx:sx+w];target[tile[:h,:w]!=0]=tile[:h,:w][tile[:h,:w]!=0]
+   colors=np.array([[24,35,51],[245,183,123],[247,247,240],[35,55,90]],dtype=np.uint8)
+   Image.fromarray(colors[diagnostic[box[1]:box[1]+box[3],box[0]:box[0]+box[2]]]).resize((box[2]*6,box[3]*6),Image.Resampling.NEAREST).save(root/'combo_12_diagnostic.png')
   if result in geometry and box and [box[0]-mm[0xb0],box[1]-mm[0xb1],box[2],box[3]]==geometry[result]['relative_box']:
    transitions[key].add(result);expanded+=1
+   expanded_fixtures.append(["offline-ROM",selector,before,128,selector,0,mm[0xb0],mm[0xb1],result,box])
+(root/'compositor_expanded_cases.json').write_text(json.dumps(expanded_fixtures))
 print('ROM-executed additional partial transitions',expanded)
 ambiguous={k:list(v)for k,v in transitions.items()if len(v)>1};print(counts,'shapes',len(geometry),'unknown',len(unknown),'transitions',len(transitions),'ambiguous',len(ambiguous))
 (root/'compositor_transitions_research.json').write_text(json.dumps({'initial':initial,'geometry':geometry,'transitions':{k:list(v)for k,v in transitions.items()},'full':{k:list(v)for k,v in full.items()},'ambiguous':ambiguous,'unknown':list(unknown)},indent=2))

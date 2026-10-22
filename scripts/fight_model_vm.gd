@@ -2,24 +2,44 @@ extends "res://scripts/fight_model.gd"
 ## Live fight adapter. Animation commands own contact, defense, interruption,
 ## completion and knockdown progression; sampled tracks are comparison fixtures.
 const AnimationMachine=preload("res://scripts/recovered/animation_machine.gd")
+const ControllerPoll=preload("res://scripts/recovered/controller_poll.gd")
 const NesRng=preload("res://scripts/recovered/nes_animation_rng.gd")
+const KnockdownEntry=preload("res://scripts/recovered/knockdown_entry.gd")
+const ContactVM=preload("res://scripts/recovered/contact_vm.gd")
+var contact_vm=ContactVM.new()
 var animation=AnimationMachine.new()
 var animation_failure:=""
+var round_scene_visible:=true
+var round_entry_wait:=-1
+var post_bell_started:=false
+var post_bell_wait:=-1
+var round_fade:=0.0
+var pending_palette_fade:=-1
 var aim_high:=false
 var queued_buttons:=0
+var queued_button_frames:=0
 func start(seed_value: int=1) -> void:
- animation.reset();animation_failure="";queued_buttons=0;aim_high=false
+ post_bell_started=false;post_bell_wait=-1;round_fade=0.0;pending_palette_fade=-1;round_entry_wait=-1
+ round_scene_visible=true
+ animation.reset();animation_failure="";queued_buttons=0;queued_button_frames=0;aim_high=false
  super.start(seed_value)
+ animation.fight_control_enabled=true
+ for address in animation.geometry.fight_initial:animation.m[int(address)]=int(animation.geometry.fight_initial[address])
+ animation.prime_display()
+ round_centis=_source_clock()
 func act(action: String,hand: String="left") -> bool:
+ if post_bell_started and state!="between_rounds":return false
  if state not in ["player_down","between_rounds"] and animation.m[0x51]&128:return false
+ var continuing_round:=state=="between_rounds"
  var accepted:=super.act(action,hand)
+ if continuing_round:return accepted
  if not accepted or state in ["player_down","between_rounds"]:return accepted
- if player_action.begins_with("left_"):animation.m[0xd5]=128;queued_buttons|=128
- elif player_action.begins_with("right_"):animation.m[0xd7]=128;queued_buttons|=64
- elif player_action=="special":animation.m[0xd9]=128;queued_buttons|=16
+ if player_action.begins_with("left_"):queued_buttons|=128
+ elif player_action.begins_with("right_"):queued_buttons|=64
+ elif player_action=="special":queued_buttons|=16
  else:
-  animation.m[0xd3]=128
   queued_buttons|=2 if player_action=="dodge_left" else (1 if player_action=="dodge_right" else 4)
+ queued_button_frames=2 # Two stable samples let the recovered poll create an edge.
  if player_action.ends_with("_head"):queued_buttons|=8
  return accepted
 func _raw_buttons() -> int:
@@ -36,28 +56,40 @@ func step() -> void:
  if not active:return
  ticks+=1
  if state=="between_rounds":return
+ if round_number>1 and round_entry_wait>=0:round_scene_visible=animation.m[0x1b]==1
+ if animation.m[0]==48:round_entry_wait=3
+ # $A774 follows the capture checkpoint; apply its writes before next tick.
+ if pending_palette_fade>=0:
+  for address in range(0x480,0x4a0):
+   var value:int=animation.m[address]
+   if value<128 and value>=pending_palette_fade:animation.m[address]=value-16 if value>=16 else 143
+  pending_palette_fade=-1
  var m: PackedInt32Array=animation.m
- m[0xd0]=_raw_buttons()|queued_buttons;m[0xd2]=m[0xd0]&15
- if not (m[0xd0]&7):m[0xd3]=0
- m[0xbc]=int(hearts>0);m[0x342]=stars;m[0x581]=speed_wait
- m[0x391]=hp;m[0x398]=opponent_hp
- var random_value: Vector2i=NesRng.advance((40+ticks)&255,m[0xd0],m[0x19])
+ var previous_buttons:=m[0xd0] # Source RNG runs before the new controller poll.
+ m=ControllerPoll.step(m,_raw_buttons()|queued_buttons)
+ # $BC is a source-controlled fatigue/recovery flag, not hearts > 0.
+ # Player knockdown sets it even when the displayed heart count is zero.
+ m[0x342]=stars
+ m[0x391]=hp;m[0x392]=hp;m[0x398]=opponent_hp;m[0x399]=opponent_hp
+ m[0x323]=hearts/10;m[0x324]=hearts%10
+ m[6]=round_number
+ var random_value: Vector2i=NesRng.advance((m[0x1e]+1)&255,previous_buttons,m[0x19])
  m[0x18]=random_value.x;m[0x19]=random_value.y
  animation.m=m
  var was_down:=state in ["player_down","opponent_down","countout"]
- if not was_down and animation.m[0x90]==1 and opponent_profile.is_empty():
-  if not taunt_done and round_centis>=4000:
-   taunt_done=true;_begin_opponent("taunt_long")
-  elif taunt_done:_schedule()
  if not player_profile.is_empty():player_age+=1
- if not opponent_profile.is_empty():opponent_age+=1
- animation.tick();queued_buttons=0
+ if opponent_action in [21,22,25]:opponent_age+=1
+ animation.tick(true)
+ if queued_button_frames>0:
+  queued_button_frames-=1
+  if queued_button_frames==0:queued_buttons=0
  if not animation.error.is_empty():
   animation_failure=animation.error;active=false;push_error(animation_failure);return
+ _sync_resources()
+ speed_wait=animation.m[0x581]
  if was_down:
+  animation.finish_tick()
   _step_knockdown();return
- # Sprite/contact VMs consume stars through their shared command state.
- if player_action=="special" and player_age==1:stars=maxi(0,stars-1)
  var pstate: int=animation.m[0x50]&127
  var ostate: int=animation.m[0x90]&127
  if pstate in [1,2] and not player_action.is_empty():_clear_player()
@@ -67,66 +99,113 @@ func step() -> void:
   _clear_opponent();state="ready"
   if was_taunt:first_jab_pending=true;scheduler_delay=1
  elif ostate in [21,22,25]:
+  if opponent_action!=ostate:
+   opponent_action=ostate;opponent_age=0
+   attack={"name":"JAB" if ostate==21 else "BODY CROSS","safe":"either","windup":20+animation.m[0x581] if ostate==21 else 58,"heavy":false}
+   event.emit("tell",Opponent.SHORT_NAME+" STEPS BACK" if ostate==25 else str(attack.name))
   if ostate==25:state="opening" if animation.m[0xba]!=0 else "taunt"
   else:
    state="windup" if opponent_age<int(attack.windup) else "recovery"
    state_ticks=maxi(0,int(attack.windup)-opponent_age)
  else:state="reaction"
  # The original collision handler resolves an incoming contact first.
- if animation.m[0x98]&128:resolve_strike()
- elif animation.m[0x58]&128 and not player_profile.is_empty():_resolve_player_contact()
+ if (animation.m[0x98]|animation.m[0x58])&128:_resolve_contacts()
+ animation.finish_tick()
+ _sync_resources()
  animation.m[0x391]=hp;animation.m[0x398]=opponent_hp
+ # $A8F6..$A8FF: after round initializer returns 1, wait two NMIs,
+ # then request visibility; $AF73 acknowledges it on the following NMI.
+ if round_entry_wait>0:
+  round_entry_wait-=1
+  if round_entry_wait==0:animation.m[0x1b]=129
  if state in ["player_down","opponent_down","countout"]:return
- if star_delay>0:
-  star_delay-=1
-  if star_delay==0:stars=mini(3,stars+1);points+=100;event.emit("star","STAR EARNED — SPECIAL AVAILABLE")
- var paused:=bool(animation.m[0x301]&1) or clock_pause>0
- if clock_pause>0:clock_pause-=1
- if not paused:round_centis+=5
- if round_centis>=18000:
+ round_centis=_source_clock()
+ if animation.m[0]==255 and animation.m[5]==3:
+  # Main-thread $A912 -> $BF7E: palette fade, then two eight-frame waits.
+  if not post_bell_started:
+   post_bell_started=true;animation.m[0x4c8]=64;release_all()
+  elif animation.m[0x4c8]>0:
+   if (animation.m[0x1e]&7)==0:
+    animation.m[0x4c8]-=16
+    pending_palette_fade=animation.m[0x4c8]
+    round_fade=1.0-float(animation.m[0x4c8])/64.0
+    if animation.m[0x4c8]==0:post_bell_wait=16
+  elif post_bell_wait>0:post_bell_wait-=1
+  if post_bell_wait!=0:return
   if round_number<3:
    state="between_rounds";release_all();_clear_player();_clear_opponent();event.emit("round","BELL — TAP A PUNCH TO CONTINUE")
   else:verdict="DECISION";finish("win" if points>=5000 else "loss")
+func _source_clock() -> int:
+ return animation.m[0x302]*6000+animation.m[0x304]*1000+animation.m[0x305]*100+animation.m[0x306]
+func _sync_resources() -> void:
+ var old_stars:=stars
+ stars=animation.m[0x342]
+ hearts=animation.m[0x323]*10+animation.m[0x324] if animation.m[0xbc]!=0 else 0
+ points=0
+ for address in range(0x3e8,0x3ee):points=points*10+animation.m[address]
+ if stars>old_stars:event.emit("star","STAR EARNED — SPECIAL AVAILABLE")
 func _begin_opponent(name: String) -> void:
  super._begin_opponent(name)
  animation.m[0x90]=opponent_action|128
 func _opponent_frame() -> Dictionary:
  return {"defense":[animation.m[0xb6],animation.m[0xb7],animation.m[0xb8],animation.m[0xb9]],"ko":animation.m[0xba],"clock_pause":bool(animation.m[0x301]&1)}
 func _player_defense(side: int) -> int:return animation.m[0x76+side]
-func _resolve_player_contact() -> void:
- var target: int=animation.m[0x74]&3
- var force: int=animation.m[0x75]
- var defense: int=animation.m[0xb6+target]
- var special:=player_action=="special"
- player_profile=player_profile.duplicate(true);player_profile.target=target;player_profile.force=force
- if force>defense:
-  animation.m[0x58]=3;animation.m[0x90]=(2 if special else 13+target)|128
- elif defense==8:
-  animation.m[0x58]=1;animation.m[0x90]=(5+target)|128
- else:animation.m[0x58]=2
- super._resolve_player_contact()
- if force>defense or defense==8:
-  animation.m[0x51]=129;animation.m[0x91]=129
-  for address in [0x74,0x75,0x76,0x77,0xb4,0xb5,0xb6,0xb7,0xb8,0xb9]:animation.m[address]=0
-func resolve_strike() -> void:
- var side: int=animation.m[0xb4]&1
- var protection:=_player_defense(side)
- animation.m[0x98]=4 if protection==255 else (2 if protection>=128 else (1 if protection==8 else 3))
- if protection<128:
-  animation.m[0x50]=136 if protection==8 else (144+side)
-  animation.m[0x51]=129;animation.m[0x91]=129
- super.resolve_strike()
- animation.m[0xb4]=0;animation.m[0xb5]=0
+func _resolve_player_contact() -> void:_resolve_contacts()
+func resolve_strike() -> void:_resolve_contacts()
+func _resolve_contacts() -> void:
+ var incoming:=bool(animation.m[0x98]&128)
+ var special:=bool(animation.m[0x74]&128)
+ var before_hp:=hp
+ var before_opponent:=opponent_hp
+ var was_attacking:=opponent_action in [21,22]
+ contact_vm.m=animation.m;contact_vm.step();animation.m=contact_vm.m
+ if not contact_vm.error.is_empty():
+  animation_failure=contact_vm.error;active=false;push_error(animation_failure);return
+ hp=animation.m[0x391];opponent_hp=animation.m[0x398]
+ if animation.m[0xbc]==0:hearts=0
+ elif animation.m[0x321]+animation.m[0x322]!=0:hearts=animation.m[0x321]*10+animation.m[0x322]
+ speed_wait=animation.m[0x581];star_hits_left=animation.m[0x347]
+ if incoming:
+  var outcome: int=animation.m[0x98]
+  if outcome in [2,4]:avoids+=1;event.emit("evade","CLEAN SLIP!")
+  elif outcome==1:avoids+=1;event.emit("guard","BLOCKED -%d" % (before_hp-hp))
+  else:
+   received+=1;event.emit("hurt","HIT -%d" % (before_hp-hp))
+ else:
+  var outcome: int=animation.m[0x58]
+  if outcome==1:event.emit("blocked","BLOCKED - CHANGE YOUR TARGET")
+  elif outcome==2:event.emit("miss","OUT OF REACH")
+  elif outcome==3:
+   hits+=1
+   if was_attacking:counters+=1
+   event.emit("counter" if was_attacking or special else "hit",("STAR UPPERCUT" if special else "CLEAN HIT")+" -%d" % (before_opponent-opponent_hp))
+ if animation.m[5]!=0:_adopt_knockdown(animation.m[5]==1)
 func _begin_knockdown(opponent: bool,instant_ko: bool) -> void:
- super._begin_knockdown(opponent,instant_ko)
- animation.begin_knockdown(opponent,getup_count,recovered_hp)
- if not opponent:
-  animation.m[0x3c1]=2+12*mini(player_total_downs-1,2)
-  animation.m[0x3c4]=getup_decay;animation.m[0x5d2]=getup_decay
-  if state=="countout":animation.m[0xc0]=0
+ # Debug/test entry calls recovered count selection, just like contact.
+ animation.m[0x391]=hp;animation.m[0x392]=hp
+ animation.m[0x398]=opponent_hp;animation.m[0x399]=opponent_hp
+ animation.m[6]=round_number;animation.m[0x302]=round_centis/6000
+ animation.m=KnockdownEntry.apply(animation.m,opponent)
+ if instant_ko:animation.m[0xba]=255
+ contact_vm.m=animation.m;contact_vm.step(0xb2eb);animation.m=contact_vm.m
+ animation.m[0x51]=129;animation.m[0x91]=129
+ if not contact_vm.error.is_empty():animation_failure=contact_vm.error;active=false;push_error(animation_failure);return
+ _adopt_knockdown(opponent)
+func _adopt_knockdown(opponent: bool) -> void:
+ _clear_player();_clear_opponent();release_all();reaction_ticks=0
+ down_age=0;count=0;stand_at=-1;star_delay=0
+ if opponent:
+  opponent_downs=animation.m[0x3ca];state="opponent_down"
+  getup_count=maxi(0,animation.m[0xc4]-153);recovered_hp=animation.m[0x39e]
+  event.emit("knockdown",Opponent.SHORT_NAME+" IS DOWN - COUNTING")
+ else:
+  player_downs=animation.m[0x8f];player_total_downs=animation.m[0x3d0]
+  state="countout" if animation.m[0xc0]==0 else "player_down"
+  stars=0;getup_needed=animation.m[0x3c3];getup_decay=animation.m[0x3c4]
+  event.emit("knockdown","YOU ARE DOWN - TAP LEFT / RIGHT TO RISE")
 func _getup_press() -> bool:
  if animation.m[0xcf]==0 or (animation.m[0x3c3]&127)==0:return false
- animation.m[0xd5]=128
+ queued_buttons|=128;queued_button_frames=2
  return true
 func _step_knockdown() -> void:
  down_age+=1
@@ -135,14 +214,38 @@ func _step_knockdown() -> void:
  getup_needed=animation.m[0x3c3]&127
  if state=="player_down" and animation.m[0x36]==2 and stand_at<0:
   stand_at=down_age;recovered_hp=animation.m[0x397];recovered_hearts=animation.m[0x322];event.emit("getup","ON YOUR FEET!")
- if animation.m[0xbb]==255:
-  if verdict.is_empty():verdict="KO"
-  finish("win" if state=="opponent_down" else "loss")
+ # Finish scripts signal through $00; $BB only coordinates actors.
+ if animation.m[0] in [254,252,253,251]:
+  verdict="TKO" if animation.m[0] in [252,251] else "KO"
+  finish("win" if animation.m[0] in [254,252] else "loss")
  elif animation.m[5]==0:
   var player_recovered:=state=="player_down"
   state="ready";_clear_player();_clear_opponent();speed_wait=24;scheduler_delay=64;scheduler_pc=1
   if player_recovered:hearts=recovered_hearts
   event.emit("getup","BACK IN THE FIGHT")
 func _next_round() -> void:
- super._next_round()
- animation.reset();animation.m[0x391]=hp;animation.m[0x398]=opponent_hp
+ var previous:PackedInt32Array=animation.m.duplicate()
+ post_bell_started=false;post_bell_wait=-1;round_fade=0.0;pending_palette_fade=-1;round_entry_wait=-1
+ round_scene_visible=false
+ round_number+=1;state="ready";release_all();_clear_player();_clear_opponent()
+ # $AB58..$AC37 logical round setup. Corner text/graphics remain original UI.
+ animation.reset()
+ for address in animation.geometry.fight_initial:animation.m[int(address)]=int(animation.geometry.fight_initial[address])
+ var m:PackedInt32Array=animation.m
+ for address in range(0x300,0x400):m[address]=previous[address]
+ for address in [0x18,0x19,0x1e]:m[address]=previous[address]
+ for address in range(0x40,0xf0):m[address]=0
+ m[6]=round_number;m[5]=0;m[0]=48;m[0x1b]=0
+ m[0xb0]=m[0x5ce];m[0xb1]=m[0x5cf]
+ m[0x14]=1;m[0x16]=1;m[0x15]=176;m[0x13]=(176-m[0x5cc])&255
+ m[0x310]=(m[0x310]-1)&255;m[0x311]=192;m[0x300]=0
+ m[0x4fd]=0;m[0x4fe]=0;m[0x4ff]=0
+ m[0x35]=0;m[0x36]=0;m[0x37]=128;m[0x39]=255;m[0x40]=129;m[0x3e0]=1
+ m[0x397]=hp;m[0x39e]=opponent_hp
+ m[0x392]=hp;m[0x393]=hp;m[0x399]=opponent_hp;m[0x39a]=opponent_hp
+ m[0x30]=1;m[0x38]=1
+ animation.m=m;animation.player_picture=58
+ animation.opponent_picture=animation.opponent_compositor.compose(128,58,0,Vector2i(m[0xb0],m[0xb1]))
+ animation.prime_display()
+ _sync_resources();queued_buttons=0;queued_button_frames=0
+ event.emit("round","ROUND %d" % round_number)

@@ -1,6 +1,13 @@
 extends RefCounted
-## Active-fight actor coordination at $B549..$B5A7 and $B651..$B65F.
+## Active-fight actor coordination at $B549..$B5A7 and $B651..$B665.
 ## Halt/ready flags, rather than a captured clip duration, release the actors.
+static func dispatch(m: PackedInt32Array) -> PackedInt32Array:
+ if m[0]&128:return m
+ # $B530 dispatch: high nibble 4 selects $B63E after the bell.
+ if m[0]==64:
+  if m[0x306]==0 and m[0x30a]==0:m[5]=3;m[0]=255
+  return m
+ return step(m)
 static func step(m: PackedInt32Array) -> PackedInt32Array:
  if m[0x301]&128:
   m[0]=64
@@ -13,6 +20,10 @@ static func step(m: PackedInt32Array) -> PackedInt32Array:
   return m
  var flags:=m[0x91]&m[0x51]
  if flags&1:
-  if flags==131:m[0x91]=0;m[0x90]=129;m[0x50]=(130-m[0xbc])&255
- elif m[0x91]==130 and m[0x51]==131:m[0x50]=(130-m[0xbc])&255
+  if flags==131:
+   m[0x91]=0;m[0x90]=129;reset_player(m)
+ elif m[0x91]==130 and m[0x51]==131:reset_player(m)
  return m
+static func reset_player(m: PackedInt32Array) -> void:
+ m[0x50]=(130-m[0xbc])&255
+ m[0x51]=128

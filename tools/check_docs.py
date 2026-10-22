@@ -15,6 +15,7 @@ BUDGETS = {
     "docs/ART_DIRECTION.md": 400,
     "docs/RECOVERY.md": 550,
     "docs/DEVELOPMENT.md": 450,
+    "docs/ANIMATION_AUDIT.md": 500,
 }
 
 

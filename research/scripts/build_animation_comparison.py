@@ -15,7 +15,7 @@ for clip,item in data.items():
    x,y,w,h=r.get('draw_box',r['box']);ax,ay=art['tip'];_,_,aw,ah=art['region']
    # Production renderer preserves aspect ratio and centers each registered alpha body.
    scale=h/ah
-   u=aw-ax if r.get('art_flip',False) else ax
+   u=aw-ax if bool(r.get('art_flip',False)) != bool(art.get('flip_correction',False)) else ax
    predicted=[x+w/2+(u-aw/2)*scale,y+ay*scale]
    r['art_glove_marker']=predicted
    r['glove_marker_error_nes_pixels']=round(sum((predicted[i]-r['tip'][i])**2 for i in range(2))**.5,2)

@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Idle and guard",
+    "fixture": "full",
+    "start": 2018,
+    "end": 2120
+  },
+  {
+    "name": "Both head punches and recoil",
+    "fixture": "full",
+    "start": 2290,
+    "end": 2410
+  },
+  {
+    "name": "Taunt, anticipation and counter",
+    "fixture": "full",
+    "start": 2790,
+    "end": 3050
+  },
+  {
+    "name": "Opponent fall, count and return",
+    "fixture": "full",
+    "start": 3390,
+    "end": 4140
+  },
+  {
+    "name": "Special punch",
+    "fixture": "full",
+    "start": 4800,
+    "end": 5000
+  },
+  {
+    "name": "TKO and player victory",
+    "fixture": "full",
+    "start": 6280,
+    "end": 6976
+  },
+  {
+    "name": "Guard and both slips",
+    "fixture": "defense",
+    "start": 2960,
+    "end": 3440
+  },
+  {
+    "name": "Body punches and blocks",
+    "fixture": "getup",
+    "start": 2290,
+    "end": 2410
+  },
+  {
+    "name": "Player fall and first get-up",
+    "fixture": "getup",
+    "start": 4200,
+    "end": 4640
+  },
+  {
+    "name": "Player second fall and get-up",
+    "fixture": "getup",
+    "start": 5240,
+    "end": 5660
+  },
+  {
+    "name": "State-22 attack",
+    "fixture": "body_counter",
+    "start": 3330,
+    "end": 3440
+  },
+  {
+    "name": "Successful right body counter",
+    "fixture": "body_counter",
+    "start": 3690,
+    "end": 3800
+  },
+  {
+    "name": "Successful left body counter",
+    "fixture": "body_counter",
+    "start": 4080,
+    "end": 4180
+  },
+  {
+    "name": "Bell, clock flash and fade",
+    "fixture": "body_counter",
+    "start": 5700,
+    "end": 5903
+  },
+  {
+    "name": "Third player knockdown and TKO",
+    "fixture": "getup_finish",
+    "start": 5900,
+    "end": 6544
+  },
+  {
+    "name": "Second-round return and referee command",
+    "fixture": "round2",
+    "start": 6652,
+    "end": 7150
+  }
+]

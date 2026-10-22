@@ -36,7 +36,7 @@ def decode(pose):
  return {'pose':pose,'descriptor':pointer,'stream':start,'end':p,'chr_page':page,'destination':dest,'tiles':tiles,'box':box},pixels
 out=root/'research/evidence/animation/decoded_player';out.mkdir(exist_ok=True)
 metadata={};images={}
-for pose in list(range(98))+list(range(128,142)):
+for pose in list(range(98))+list(range(128,175)):
  try:meta,pix=decode(pose)
  except (IndexError,ValueError):continue
  metadata[str(pose)]=meta
@@ -44,9 +44,9 @@ for pose in list(range(98))+list(range(128,142)):
  lut=np.array([[0,0,0,0],[220,170,120,255],[30,30,40,255],[60,220,110,255]],dtype=np.uint8)
  im=Image.fromarray(lut[pix]);im.save(out/f'{pose:03}.png');images[pose]=im
 (root/'research/evidence/animation/player_compositor.json').write_text(json.dumps(metadata,indent=2))
-for first in range(0,98,24):
+for first in list(range(0,98,24))+[128,152]:
  sheet=Image.new('RGB',(960,760),'#203040');d=ImageDraw.Draw(sheet)
- for i,pose in enumerate(range(first,min(98,first+24))):
+ for i,pose in enumerate(range(first,min(98 if first<128 else 175,first+24))):
   if pose not in images:continue
   b=metadata[str(pose)]['box'];x=(i%8)*120;y=(i//8)*250
   d.text((x+5,y+5),f'pose {pose}',fill='white')

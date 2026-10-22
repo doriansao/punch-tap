@@ -1,0 +1,5 @@
+Tool: built-in imagegen. Integrated proposal, pending user review.
+Reference: teo_victory_v1.png; see its prompt for original generation.
+Source: exec-33338e23-0d0b-4766-9c50-b84528d15409.png
+
+Precise consistency correction to this TWO-sprite victory atlas. Keep left sprite completely unchanged. Keep right sprite's boots, legs, shorts, torso, raised arms, gloves, overall pose and canvas position unchanged. Enlarge ONLY the right sprite's entire head/hair/face by approximately 18 percent, centered at its neck, so its head matches the left sprite's head size when these two drawings are viewed as animation frames. Preserve the same character identity and bold cel shaded cartoon style. Integrate neck and ear joins cleanly. Keep genuine transparent background and both full isolated sprites, no text or effects. The right head is currently visibly smaller than the left despite both being the same character; correct exactly that without changing anything else.

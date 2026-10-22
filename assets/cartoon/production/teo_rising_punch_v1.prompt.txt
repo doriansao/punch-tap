@@ -1,0 +1,6 @@
+Tool: built-in imagegen. Integrated proposal; user review pending.
+Reference: teo_extended_punch_v1.png
+Source: exec-cfe4cd75-7c2c-4376-81d5-25fe53e3ef68.png
+Registration is authored. Source sequence, timing and reach remain unchanged.
+
+Edit this original Teo boxing sprite into the immediately preceding rising punch pose for the SAME animation. Preserve EXACT head size, hair silhouette, glove size, torso, shorts and stubby limb proportions and bold cel shaded art style. Single isolated complete rear view sprite on transparent background. Change only the LEFT punching arm: bend its elbow and lower its glove so that the top of that glove is only about ONE QUARTER of the head width above the hair's highest point, instead of the fully extended high reach in the reference. The raised mint glove must still be the highest point. Left forearm points up and elbow out, a readable halfway-extended uppercut. Right glove stays at right cheek. Knees slightly bent, boots beneath body with heels lifting, like takeoff before the airborne extension. Do not enlarge the head or torso to fill the frame. Final silhouette height approximately 87 percent of reference silhouette height, because only the arm height changes. Keep entire body within frame with transparent margins. No effects or extra drawings.

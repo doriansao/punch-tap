@@ -1,0 +1,153 @@
+{
+  "references": [
+    "../approved_concept.png",
+    "../teo_proportion_reference_v2.png",
+    {
+      "file": "nico_jab_contact_v2_proposal.png",
+      "prompt_file": "nico_jab_contact_v2_proposal.prompt.txt",
+      "tool": "built-in imagegen",
+      "status": "rejected: contact glove raised too far",
+      "references": [
+        "nico_jab_contact_v1.png"
+      ]
+    },
+    {
+      "file": "nico_jab_contact_v3.png",
+      "prompt_file": "nico_jab_contact_v3.prompt.txt",
+      "tool": "built-in imagegen",
+      "status": "integrated proposal; user review pending",
+      "references": [
+        "nico_jab_contact_v1.png"
+      ]
+    },
+    {
+      "file": "nico_guard_close_v1.png",
+      "prompt_file": "nico_guard_close_v1.prompt.txt",
+      "tool": "built-in imagegen",
+      "status": "integrated proposal; user review pending",
+      "references": [
+        "nico_stances.png"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "file": "teo_attacks_v2.png",
+      "prompt": "Edit reference 1, the eight-cell transparent Teo attack atlas. Preserve the exact 4x2 layout, transparency, character identity, squat cartoon proportions, giant boots and approved oversized mint gloves from reference 2. Change ONLY top-row cells 1 and 4: these are forward body punches viewed from behind, NOT punches sideways. Foreshorten the LEFT punching arm so it extends AWAY from the camera toward the opponent above screen; the mint glove should appear beside the LEFT side of Teo's HEAD, close to the body's vertical centerline, with its top approximately one eighth of total sprite height below the highest hair tip. The elbow stays close to the torso. Do not extend a straight arm horizontally left. Both boots stay planted and his whole back remains visible; compact short torso, short legs unchanged. Cell4 is a slightly twisted followthrough of this SAME forward punch, also left glove close beside head. Keep other six poses unchanged, including all head punches and uppercuts. Full sprites isolated, true transparent background, no labels, floor, shadows, effects, extra figures. Never enlarge the body or lengthen limbs.",
+      "hint": "Generated images are saved to C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4 as C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4\\exec-be8868bd-c40b-407e-b077-11bdc990bccc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "teo_stances.png",
+      "prompt": "Create an animation atlas of EXACTLY EIGHT isolated full-body sprites in a strict 4-column by 2-row grid, row-major order, with true transparent background, generous empty margins between cells, no text, no ground, no cast shadow, no decorative marks. Use the supplied APPROVED Teo character reference as the sole identity and anatomy source. Every sprite must retain its very compact caricature proportions: huge tousled head, tiny torso, almost no waist, very short stubby legs, enormous white boots, rounded short arms, deliberately oversized mint gloves at the EXACT approved reference size. Approximately 2.7 heads tall including hair. No realistic anatomy, muscles, long torso or long legs. Bold ink outlines and flat cel-shaded cartoon colors. Orange white-chevron tank, charcoal shorts, mint gloves, white boots with orange laces. SAME identity and body scale in every cell; do not stretch a pose to fill cell height. All poses DIRECT REAR VIEW, facing away toward an opponent above screen. Top row: 1 rear guarded idle with left heel lifted slightly; 2 same guarded idle with right heel lifted slightly; 3 exhausted shoulders slumped, gloves hanging low, left foot slightly ahead; 4 same exhaustion right foot ahead. Bottom row: 5 exhausted straight rear stance with gloves down, both boots planted; 6 comic backward recoil, torso leaning back with knees bent and chin tilted up, rear view; 7 rear view with both gloves touching above head, legs together and boots planted; 8 same overhead glove pose with both heels lifted. Keep whole hair/gloves/boots visible in every cell. These are replacement pose drawings for existing recovered animation IDs, not new action timing. Preserve proportions of the approved reference especially the tiny torso and oversized gloves.",
+      "hint": "Generated images are saved to C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4 as C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4\\exec-71dc0358-f2da-4779-96d9-d0d9abd79196.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "nico_stances.png",
+      "prompt": "Create exactly EIGHT isolated full-body game sprites on genuine transparent background, in a strict evenly spaced 4 columns x 2 rows atlas, no text, no shadows, no effects. Subject ONLY the HUGE cartoon NICO RIVET REYES in the supplied approved concept, NOT the small boxer. Preserve Nico's exact identity: absurdly broad heavy barrel torso, huge trapezoid square jaw, swept black quiff, tiny eyes and comic eyebrows, extremely short legs, orange giant boxing gloves, dark teal trunks with orange belt and round rivet motifs, white boxing boots. Strong black outlines, flat cel shades. Exaggerated bulky cartoon proportions, no realistic athletic muscle definition or lengthy limbs. Every stance torso and face DIRECTLY FRONT FACING, NOT three-quarter view. Same character scale across cells, complete hair and boots. Top row left to right: 1 low body guard, boots close together, smug straight front stance; 2 same low guard with feet spread wider and knees slightly bent; 3 same low guard, narrow stance with slight torso compression; 4 high guard with orange gloves close to cheeks, narrow stance. Bottom row: 5 high guard step with left knee raised; 6 asymmetric guard with left glove low and right glove beside cheek, front view; 7 high guard with head tilted toward his left shoulder and both gloves together; 8 same tilt with slight knee bend. Preserve the enormous belly/shoulder mass, massive gloves and comically stubby legs in every slot. Never slim him to fit cell; use margins and a wider canvas instead. Reference art is authoritative; generate production pose drawings, not a labelled concept sheet.",
+      "hint": "Generated images are saved to C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4 as C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4\\exec-a7e342c3-febf-4867-b500-4cdb55284c31.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "teo_motion.png",
+      "prompt": "Eight full-body game sprites, strict 4 columns x 2 rows evenly spaced atlas, true transparent background, no labels/shadows/effects. Use reference 1 APPROVED TEO proportions as absolute anatomy/identity lock; reference 2 is the matching newly produced stance sheet. Compact tiny adult cartoon boxer, huge tousled head, tiny torso and very short stubby legs, oversized mint gloves and white boots, orange chevron tank, charcoal shorts. Exactly same head/body/glove ratio as reference 1; NEVER lengthen limbs or draw realistic muscles. Flat cel shades and bold black outlines. Every figure fully isolated with generous cell margins, same body scale; don't enlarge crouches to fill cells. All are rear-view except slight face glimpses caused by recoil. Row-major poses: 1 lean dodge left with both gloves raised above the head, left knee bent and right heel up; 2 rear guard with left side slip and crossed stepping feet; 3 lean rightward and backwards, guard near chest, knees bent; 4 lean leftward and backwards in same guard, opposite stepping feet; 5 rear three-quarter downward crouch with gloves forward at belly height, bent knees; 6 rear uppercut with LEFT mint glove extending diagonally up to screen left, right glove by face, planted short legs; 7 comic backward hurt, head thrown back and knees buckling, gloves low; 8 stumbling/falling FORWARD away from viewer with head down, back curved, gloves down beside body, bent knees. Cartoon physics and expressive silhouette, but preserve each prescribed view and hand. No front-view fighting stance.",
+      "hint": "Generated images are saved to C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4 as C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4\\exec-7dc002ed-1109-49a8-b330-07ccdab1c0f9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "teo_attacks.png",
+      "prompt": "Create exactly EIGHT full-body TEO boxing game sprites, transparent background, evenly spaced 4 columns x 2 rows, no labels, no shadows/effects. First reference is the approved anatomy model; second is matching stance art. Lock his very small squat caricature body, huge tousled head, tiny orange chevron torso, stubby legs, giant white boots and oversized mint gloves at approved size. No realistic muscles or long limbs. Bold black outline and cel shade. Same character body scale in all cells; lifted arms may be higher but do NOT stretch torso or legs. Mostly direct rear view, facing away toward opponent above screen. Required poses in row-major order: 1 rear left body punch: LEFT arm thrust to screen-left/forward at chest height, right glove near face, planted feet; 2 rear RIGHT head punch: RIGHT glove reaches up above right side of head, left glove protects face; 3 rear guard stepping forward, both gloves near cheeks, one heel raised; 4 rear left body-punch follow-through with left glove extending forward and slightly upward, right at cheek, shoulder turn but back remains visible; 5 rear RIGHT head punch with right glove high diagonally right, shoulders twisted slightly left; 6 rear RIGHT straight uppercut, right glove above head, left glove low at ribs, spring upward with short legs; 7 rear LEFT straight uppercut, left glove above head, right glove low at ribs, same compact body; 8 recoil from a body hit: body twists toward viewer's left enough for a comic grimace in profile, elbows bent outward, both gloves pulled toward ribs, knees buckled. Each sprite entirely contained in its own cell with clear separation. Keep the approved oversized glove-to-body ratio in all punches.",
+      "hint": "Generated images are saved to C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4 as C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4\\exec-dc67e330-72a3-4941-a0c5-f397f38b6f1b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "teo_finish.png",
+      "prompt": "Exactly EIGHT full-body TEO sprites in a strict 4 columns x 2 rows atlas on genuine transparent background. No text, shadows, effects or floor. Reference 1 is the approved Teo proportions and glove size; reference 2 matches production art. Preserve huge tousled head, tiny short orange chevron torso, stubby legs, oversized mint gloves and huge white orange-laced boots, charcoal shorts; approximately 2.7 heads tall. Bold black outlines, flat warm cel shades. NO realistic muscles or long limbs. Constant body scale across slots, complete full bodies inside equal cells with generous margins. Top row: 1 FRONT-facing joyful victory with both gloves beside ears, elbows out, boots planted close; 2 same front victory with feet apart and knees bent; 3 front celebration reaching BOTH gloves straight above head, short torso unchanged and feet together; 4 rear three-quarter comic hurt recoil leaning backward toward screen right with chin thrown up, both gloves at waist, one short leg lifted behind. Bottom row ALL DIRECT REAR VIEW facing away: 5 get-up recovery, head bowed deeply, tiny shoulders slumped, hands near chest, standing close feet; 6 same pose slightly straighter with head less bowed; 7 more upright, head raised, gloves beside cheeks, feet apart; 8 fully upright guarded rear stance, weight on one foot with the other heel lifted. Bottom four are small posture changes of SAME character, not different anatomy or scaling. Do not extend legs to fill the cell.",
+      "hint": "Generated images are saved to C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4 as C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4\\exec-3a903915-0240-4a33-8ec7-4e72228f79d3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "nico_motion.png",
+      "prompt": "Create EIGHT isolated full-body Nico Rivet Reyes cartoon boxer sprites in strict 4 columns x 2 rows, transparent background, generous margins, NO text/shadows/effects. Match huge broad barrel torso, massive square jaw, black quiff, giant orange gloves, teal riveted shorts, short legs and white boots from reference concept and production stances. Flat cel shade, bold outline, extremely exaggerated cartoon proportions. Same body scale per cell, do not enlarge crouches. Row-major: 1 front three-quarter toward screen left, knees bent, gloves guarding belly; 2 front-facing taunt chin raised, right glove at cheek left low; 3 direct front asymmetric guard; 4 profile facing screen left, comic backward head recoil, mouth open and cheeks squashed, gloves down; 5 direct front high guard, one knee lifted; 6 turning BACK toward viewer during stumble away, arms dropped; 7 prone face down, back toward viewer, arms reaching away and feet nearer viewer, full body visible; 8 front high guard stepping with right knee lifted. Normal guard poses FRONT facing, turns only prescribed recoil and fall slots. Maintain same massive short-limbed body and face.",
+      "hint": "Generated images are saved to C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4 as C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4\\exec-336bfc30-f29b-4e17-8dab-2a7f133549db.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "nico_reactions.png",
+      "prompt": "Exactly EIGHT isolated full-body Nico cartoon boxer sprites, strict 4-column 2-row atlas, transparent background, wide margins, no lettering or decorative effects/shadows. Identity/proportions from supplied approved concept and stance sheet: huge barrel torso, massive jaw and black quiff, giant orange gloves, teal shorts orange rivets, comically short legs white boots. Bold ink flat cel shading, cartoon not realistic. Constant body scale. Row-major: 1 direct FRONT body-hit reaction, torso squashed, cheeks puffed, knees together, both gloves pressed against belly; 2 same front belly hurt with wider feet and pained crossed eyes; 3 FRONT torso with head snapped to screen RIGHT, squashed cheek and rubbery lips, both gloves belly; 4 same head RIGHT hit with one glove near cheek; 5 profile head facing screen LEFT, body leaning BACK toward screen right, dazed open mouth, both gloves raised elbows bent; 6 profile facing screen LEFT, hunched FORWARD stagger, arms hanging down; 7 BACK view kneeling on floor, both gloves on floor in front, head bowed; 8 BACK three-quarter kneeling, head twisted back toward viewer with goofy dazed expression. Keep all limbs complete and cell-contained. Funny faces but no stars or motion lines. Do not change torso proportions or normal front orientation.",
+      "hint": "Generated images are saved to C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4 as C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4\\exec-e08f1671-2e2d-4f9e-82e8-7cee1d1b189e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "nico_finish.png",
+      "prompt": "Exactly EIGHT full-body isolated Nico Rivet Reyes game sprites, strict 4 columns by 2 rows transparent atlas, wide clear margins, no text shadows motion lines or effects. Match references: enormously broad cartoon barrel torso, massive square jaw, swept black quiff, orange huge gloves, dark teal riveted shorts orange belt, stubby legs white boots. Bold black outlines flat cel shade. No realistic body proportions. Same body scale in every cell, do not enlarge lying or kneeling poses. Row-major: 1 profile facing screen RIGHT staggering backwards toward screen left with head thrown back and gloves raised, goofy dazed mouth; 2 back-facing falling away, hunched torso and arms stretched forward; 3 face-down prone back visible, arms and legs splayed, boots closest to viewer, full body; 4 BACK view on both knees, gloves on ground and head bowed; 5 back three-quarter rising from one knee, head turned toward screen LEFT; 6 FRONT victorious laughing, RIGHT glove held straight overhead, other glove at hip; 7 FRONT high guard both gloves cheeks, feet close; 8 same front high guard with wide feet and bent knees. Preserve broad short cartoon shape, huge gloves, tiny legs. Each complete silhouette stays inside its cell.",
+      "hint": "Generated images are saved to C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4 as C:\\Users\\doria\\.codex\\generated_images\\01a15b14-61c7-7f92-9542-b6df20c2c7b4\\exec-3301f0f4-9104-41b1-b511-23024a82ff18.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "file": "nico_body_block_v1.png",
+      "prompt_file": "nico_body_block_v1.prompt.txt",
+      "tool": "built-in imagegen",
+      "status": "integrated proposal; user review pending",
+      "references": [
+        "../approved_concept.png",
+        "nico_stances.png"
+      ]
+    },
+    {
+      "file": "teo_extended_punch_v1.png",
+      "prompt_file": "teo_extended_punch_v1.prompt.txt",
+      "tool": "built-in imagegen",
+      "status": "integrated proposal; user review pending",
+      "references": [
+        "../teo_proportion_reference_v2.png"
+      ]
+    },
+    {
+      "file": "teo_rising_punch_v1.png",
+      "prompt_file": "teo_rising_punch_v1.prompt.txt",
+      "tool": "built-in imagegen",
+      "status": "integrated proposal; user review pending",
+      "references": [
+        "teo_extended_punch_v1.png"
+      ]
+    },
+    {
+      "file": "teo_victory_v1.png",
+      "prompt_file": "teo_victory_v1.prompt.txt",
+      "tool": "built-in imagegen",
+      "status": "superseded by v2 head-size correction",
+      "references": [
+        "../teo_proportion_reference_v2.png"
+      ]
+    },
+    {
+      "file": "teo_recoil_fall_v1.png",
+      "prompt_file": "teo_recoil_fall_v1.prompt.txt",
+      "tool": "built-in imagegen",
+      "status": "integrated proposal; user review pending",
+      "references": [
+        "../teo_proportion_reference_v2.png"
+      ]
+    },
+    {
+      "file": "teo_victory_v2.png",
+      "prompt_file": "teo_victory_v2.prompt.txt",
+      "tool": "built-in imagegen",
+      "status": "integrated proposal; user review pending",
+      "references": [
+        "teo_victory_v1.png"
+      ]
+    },
+    {
+      "file": "teo_special_turn_v1.png",
+      "prompt_file": "teo_special_turn_v1.prompt.txt",
+      "tool": "built-in imagegen",
+      "status": "integrated proposal; user review pending",
+      "references": [
+        "../teo_proportion_reference_v2.png"
+      ]
+    },
+    {
+      "file": "referee_arm_loop_v1.png",
+      "prompt_file": "referee_arm_loop_v1.prompt.txt",
+      "tool": "built-in imagegen",
+      "status": "integrated proposal: consistent one-arm sequence; native right-facing head differs from requested/source facing; follow-up correction blocked by image tool",
+      "references": [
+        "referee_v1.png"
+      ]
+    }
+  ]
+}

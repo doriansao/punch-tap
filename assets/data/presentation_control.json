@@ -1,0 +1,626 @@
+{
+  "initial": {
+    "1": 36056,
+    "2": 36122
+  },
+  "commands": {
+    "36122": {
+      "op": "choose_alt",
+      "value": 2,
+      "next": 36123
+    },
+    "36123": {
+      "op": "draw_alt",
+      "value": 5,
+      "next": 36124
+    },
+    "36124": {
+      "op": "choose_alt",
+      "value": 0,
+      "next": 36125
+    },
+    "36125": {
+      "op": "draw_alt",
+      "value": 2,
+      "next": 36126
+    },
+    "36126": {
+      "op": "choose",
+      "value": 5,
+      "next": 36127
+    },
+    "36127": {
+      "op": "draw",
+      "value": 0,
+      "next": 36128
+    },
+    "36128": {
+      "op": "draw",
+      "value": 1,
+      "next": 36129
+    },
+    "36129": {
+      "op": "draw",
+      "value": 6,
+      "next": 36130
+    },
+    "36130": {
+      "op": "choose_alt",
+      "value": 0,
+      "next": 36131
+    },
+    "36131": {
+      "op": "draw_alt",
+      "value": 3,
+      "next": 36132
+    },
+    "36132": {
+      "op": "wait",
+      "value": 15,
+      "next": 36134,
+      "operand": 1
+    },
+    "36134": {
+      "op": "draw",
+      "value": 5,
+      "next": 36135
+    },
+    "36135": {
+      "op": "branch",
+      "value": 8,
+      "next": 36137,
+      "operand": 5
+    },
+    "36137": {
+      "op": "choose_alt",
+      "value": 3,
+      "next": 36138
+    },
+    "36138": {
+      "op": "draw_alt",
+      "value": 7,
+      "next": 36139
+    },
+    "36139": {
+      "op": "choose_alt",
+      "value": 4,
+      "next": 36140
+    },
+    "36140": {
+      "op": "draw_alt",
+      "value": 8,
+      "next": 36141
+    },
+    "36141": {
+      "op": "choose",
+      "value": 14,
+      "next": 36142
+    },
+    "36142": {
+      "op": "draw",
+      "value": 2,
+      "next": 36143
+    },
+    "36143": {
+      "op": "draw",
+      "value": 3,
+      "next": 36144
+    },
+    "36144": {
+      "op": "draw",
+      "value": 4,
+      "next": 36145
+    },
+    "36145": {
+      "op": "choose_alt",
+      "value": 1,
+      "next": 36146
+    },
+    "36146": {
+      "op": "draw_alt",
+      "value": 11,
+      "next": 36147
+    },
+    "36147": {
+      "op": "draw",
+      "value": 0,
+      "next": 36148
+    },
+    "36148": {
+      "op": "choose_alt",
+      "value": 0,
+      "next": 36149
+    },
+    "36149": {
+      "op": "draw_alt",
+      "value": 3,
+      "next": 36150
+    },
+    "36150": {
+      "op": "choose_alt",
+      "value": 2,
+      "next": 36151
+    },
+    "36151": {
+      "op": "draw_alt",
+      "value": 5,
+      "next": 36152
+    },
+    "36152": {
+      "op": "choose",
+      "value": 5,
+      "next": 36153
+    },
+    "36153": {
+      "op": "draw",
+      "value": 0,
+      "next": 36154
+    },
+    "36154": {
+      "op": "draw",
+      "value": 1,
+      "next": 36155
+    },
+    "36155": {
+      "op": "draw",
+      "value": 6,
+      "next": 36156
+    },
+    "36156": {
+      "op": "choose_alt",
+      "value": 0,
+      "next": 36157
+    },
+    "36157": {
+      "op": "draw_alt",
+      "value": 2,
+      "next": 36158
+    },
+    "36158": {
+      "op": "wait",
+      "value": 15,
+      "next": 36160,
+      "operand": 1
+    },
+    "36160": {
+      "op": "draw",
+      "value": 5,
+      "next": 36161
+    },
+    "36161": {
+      "op": "branch",
+      "value": 8,
+      "next": 36163,
+      "operand": 31
+    },
+    "36163": {
+      "op": "choose_alt",
+      "value": 2,
+      "next": 36164
+    },
+    "36164": {
+      "op": "draw_alt",
+      "value": 4,
+      "next": 36165
+    },
+    "36165": {
+      "op": "choose",
+      "value": 15,
+      "next": 36166
+    },
+    "36166": {
+      "op": "draw",
+      "value": 2,
+      "next": 36167
+    },
+    "36167": {
+      "op": "draw",
+      "value": 3,
+      "next": 36168
+    },
+    "36168": {
+      "op": "draw",
+      "value": 4,
+      "next": 36169
+    },
+    "36169": {
+      "op": "choose_alt",
+      "value": 1,
+      "next": 36170
+    },
+    "36170": {
+      "op": "draw_alt",
+      "value": 10,
+      "next": 36171
+    },
+    "36171": {
+      "op": "draw",
+      "value": 12,
+      "next": 36172
+    },
+    "36172": {
+      "op": "choose_alt",
+      "value": 3,
+      "next": 36173
+    },
+    "36173": {
+      "op": "draw_alt",
+      "value": 6,
+      "next": 36174
+    },
+    "36174": {
+      "op": "choose_alt",
+      "value": 2,
+      "next": 36175
+    },
+    "36175": {
+      "op": "draw_alt",
+      "value": 4,
+      "next": 36176
+    },
+    "36176": {
+      "op": "choose",
+      "value": 5,
+      "next": 36177
+    },
+    "36177": {
+      "op": "draw",
+      "value": 0,
+      "next": 36178
+    },
+    "36178": {
+      "op": "draw",
+      "value": 1,
+      "next": 36179
+    },
+    "36179": {
+      "op": "draw",
+      "value": 6,
+      "next": 36180
+    },
+    "36180": {
+      "op": "choose_alt",
+      "value": 4,
+      "next": 36181
+    },
+    "36181": {
+      "op": "draw_alt",
+      "value": 9,
+      "next": 36182
+    },
+    "36182": {
+      "op": "wait",
+      "value": 15,
+      "next": 36184,
+      "operand": 1
+    },
+    "36184": {
+      "op": "draw",
+      "value": 5,
+      "next": 36185
+    },
+    "36185": {
+      "op": "wait",
+      "value": 8,
+      "next": 36187,
+      "operand": 74
+    },
+    "36187": {
+      "op": "branch",
+      "value": 15,
+      "next": 36189,
+      "operand": 0
+    },
+    "36056": {
+      "op": "choose",
+      "value": 0,
+      "next": 36057
+    },
+    "36057": {
+      "op": "draw",
+      "value": 3,
+      "next": 36058
+    },
+    "36058": {
+      "op": "choose",
+      "value": 13,
+      "next": 36059
+    },
+    "36059": {
+      "op": "draw",
+      "value": 12,
+      "next": 36060
+    },
+    "36060": {
+      "op": "choose_alt",
+      "value": 1,
+      "next": 36061
+    },
+    "36061": {
+      "op": "draw_alt",
+      "value": 10,
+      "next": 36062
+    },
+    "36062": {
+      "op": "choose_alt",
+      "value": 12,
+      "next": 36063
+    },
+    "36063": {
+      "op": "draw_alt",
+      "value": 0,
+      "next": 36064
+    },
+    "36064": {
+      "op": "choose_alt",
+      "value": 3,
+      "next": 36065
+    },
+    "36065": {
+      "op": "draw_alt",
+      "value": 6,
+      "next": 36066
+    },
+    "36066": {
+      "op": "choose_alt",
+      "value": 11,
+      "next": 36067
+    },
+    "36067": {
+      "op": "draw_alt",
+      "value": 15,
+      "next": 36068
+    },
+    "36068": {
+      "op": "choose",
+      "value": 2,
+      "next": 36069
+    },
+    "36069": {
+      "op": "draw",
+      "value": 5,
+      "next": 36070
+    },
+    "36070": {
+      "op": "wait",
+      "value": 8,
+      "next": 36072,
+      "operand": 55
+    },
+    "36072": {
+      "op": "choose",
+      "value": 3,
+      "next": 36073
+    },
+    "36073": {
+      "op": "draw",
+      "value": 6,
+      "next": 36074
+    },
+    "36074": {
+      "op": "choose",
+      "value": 13,
+      "next": 36075
+    },
+    "36075": {
+      "op": "draw",
+      "value": 12,
+      "next": 36076
+    },
+    "36076": {
+      "op": "choose_alt",
+      "value": 4,
+      "next": 36077
+    },
+    "36077": {
+      "op": "draw_alt",
+      "value": 8,
+      "next": 36078
+    },
+    "36078": {
+      "op": "choose_alt",
+      "value": 12,
+      "next": 36079
+    },
+    "36079": {
+      "op": "draw_alt",
+      "value": 1,
+      "next": 36080
+    },
+    "36080": {
+      "op": "choose_alt",
+      "value": 1,
+      "next": 36081
+    },
+    "36081": {
+      "op": "draw_alt",
+      "value": 10,
+      "next": 36082
+    },
+    "36082": {
+      "op": "choose_alt",
+      "value": 11,
+      "next": 36083
+    },
+    "36083": {
+      "op": "draw_alt",
+      "value": 15,
+      "next": 36084
+    },
+    "36084": {
+      "op": "choose",
+      "value": 4,
+      "next": 36085
+    },
+    "36085": {
+      "op": "draw",
+      "value": 8,
+      "next": 36086
+    },
+    "36086": {
+      "op": "wait",
+      "value": 8,
+      "next": 36088,
+      "operand": 88
+    },
+    "36088": {
+      "op": "choose",
+      "value": 1,
+      "next": 36089
+    },
+    "36089": {
+      "op": "draw",
+      "value": 11,
+      "next": 36090
+    },
+    "36090": {
+      "op": "choose",
+      "value": 13,
+      "next": 36091
+    },
+    "36091": {
+      "op": "draw",
+      "value": 13,
+      "next": 36092
+    },
+    "36092": {
+      "op": "choose_alt",
+      "value": 0,
+      "next": 36093
+    },
+    "36093": {
+      "op": "draw_alt",
+      "value": 2,
+      "next": 36094
+    },
+    "36094": {
+      "op": "choose_alt",
+      "value": 12,
+      "next": 36095
+    },
+    "36095": {
+      "op": "draw_alt",
+      "value": 0,
+      "next": 36096
+    },
+    "36096": {
+      "op": "choose_alt",
+      "value": 3,
+      "next": 36097
+    },
+    "36097": {
+      "op": "draw_alt",
+      "value": 7,
+      "next": 36098
+    },
+    "36098": {
+      "op": "choose_alt",
+      "value": 11,
+      "next": 36099
+    },
+    "36099": {
+      "op": "draw_alt",
+      "value": 14,
+      "next": 36100
+    },
+    "36100": {
+      "op": "choose",
+      "value": 2,
+      "next": 36101
+    },
+    "36101": {
+      "op": "draw",
+      "value": 4,
+      "next": 36102
+    },
+    "36102": {
+      "op": "wait",
+      "value": 8,
+      "next": 36104,
+      "operand": 40
+    },
+    "36104": {
+      "op": "choose",
+      "value": 3,
+      "next": 36105
+    },
+    "36105": {
+      "op": "draw",
+      "value": 7,
+      "next": 36106
+    },
+    "36106": {
+      "op": "choose",
+      "value": 13,
+      "next": 36107
+    },
+    "36107": {
+      "op": "draw",
+      "value": 13,
+      "next": 36108
+    },
+    "36108": {
+      "op": "choose_alt",
+      "value": 4,
+      "next": 36109
+    },
+    "36109": {
+      "op": "draw_alt",
+      "value": 9,
+      "next": 36110
+    },
+    "36110": {
+      "op": "choose_alt",
+      "value": 12,
+      "next": 36111
+    },
+    "36111": {
+      "op": "draw_alt",
+      "value": 1,
+      "next": 36112
+    },
+    "36112": {
+      "op": "choose_alt",
+      "value": 1,
+      "next": 36113
+    },
+    "36113": {
+      "op": "draw_alt",
+      "value": 11,
+      "next": 36114
+    },
+    "36114": {
+      "op": "choose_alt",
+      "value": 11,
+      "next": 36115
+    },
+    "36115": {
+      "op": "draw_alt",
+      "value": 14,
+      "next": 36116
+    },
+    "36116": {
+      "op": "choose",
+      "value": 4,
+      "next": 36117
+    },
+    "36117": {
+      "op": "draw",
+      "value": 9,
+      "next": 36118
+    },
+    "36118": {
+      "op": "wait",
+      "value": 8,
+      "next": 36120,
+      "operand": 54
+    },
+    "36120": {
+      "op": "branch",
+      "value": 15,
+      "next": 36122,
+      "operand": 0
+    }
+  },
+  "scope": "HUD control flow and RNG consumption only; no original text or tile graphics."
+}

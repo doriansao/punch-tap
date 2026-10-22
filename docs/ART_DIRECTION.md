@@ -18,14 +18,18 @@ User decisions recorded: 2026-10-21.
 
 ## Production rules
 
-Use approved references for appearance. Old realistic atlases are not anatomy/style references. They previously pulled generation toward longer bodies and smaller gloves, which the user rejected.
+Use approved references for appearance. Old realistic atlases are not anatomy/style references. They caused rejected longer bodies and smaller gloves.
 
 Recover pose intent, hand laterality and orientation from evidence; map original poses to those IDs. Keep recovered sequence order, frame durations, motion offsets and contact frames. Concept exaggeration does not authorize new animation timing.
 
-Check idle, punches, dodge, reaction and knockdown together in Godot. Ensure Teo stays small relative to Nico, gloves align with contacts, frame pivots do not jump, and off-screen bodies crop instead of shrinking.
+Check idle, punches, dodge, reaction and knockdown together in Godot. Dodge art 10/11 requires horizontal correction to lean outward. Ensure Teo stays small relative to Nico, gloves align with contacts, frame pivots do not jump, and off-screen bodies crop instead of shrinking.
 
 ## Asset status
 
-`assets/cartoon/teo_rear.png` and the `teo_recovered_*` sheets in that directory are **rejected intermediate proportions**, not approved final sprites. They have not replaced the active runtime registration. Do not use them as the next generation's identity reference.
+`assets/cartoon/teo_rear.png` and the `teo_recovered_*` sheets in that directory are **rejected intermediate proportions**, not approved final sprites. Do not use them as identity references.
 
-The approved v2 PNG is a model sheet, not a usable atlas. Full sprite replacement and integration remain unfinished. Record future generation prompts and source references beside their deliverables; keep previews separate from runtime assets until validated.
+Generated ring, icon controls and empty bar frames are in `assets/cartoon/interface/`; Godot supplies live fills. These are integrated proposals, not approved designs.
+
+Logo, punches, recoil/fall, special, victory and referee arm-loop v1 are integrated proposals. [Animation audit](ANIMATION_AUDIT.md) records corrections. Shared body height stabilizes arm poses. Native right-facing referee art remains a proposal; imagegen blocked its facing correction.  Prompts and `generation_manifest.json` record provenance.
+
+`register_cartoon_art.py` measures alpha/glove landmarks and direction; connected-component spans prevent neighbouring-pose bleed. `referee_v1.png` derives from the original [referee concept](../assets/cartoon/referee_concept_v1.png), with adjacent prompt/provenance. Body/count commands drive movement; cartoon pose mapping and scale are authored. `nico_body_block_v1.png` supplies composition `bd7da4410430e979` only, including its idle reuse.

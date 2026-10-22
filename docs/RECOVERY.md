@@ -1,7 +1,5 @@
 # Reverse-engineering evidence
 
-This page indexes evidence and its limits; it does not replace raw captures. Historical validation counts below are prior recorded results, not tests rerun on 2026-10-21.
-
 ## Source and tools
 
 - Local ROM: `G:\Programming\punch-out-ai\rom\punch-out.nes`.
@@ -13,17 +11,17 @@ This page indexes evidence and its limits; it does not replace raw captures. His
 ## Evidence levels
 
 1. **Observed:** emulator captures and actual routine entry/exit state comparisons.
-2. **Source-derived:** disassembly and offline execution against selected captured states. Not proof that every synthetic state is reachable.
+2. **Source-derived:** disassembly/offline execution; synthetic states may be unreachable.
 3. **Original-art estimate:** presentation registration for anatomy not recoverable from visible source pixels. Must be labeled.
 4. **Integration:** matched input through the complete live fight. Routine-level parity does not imply whole-bout parity.
 
-Prior validation reported: player VM, opponent step, player input and player get-up each compared against 13,953 captured calls; opponent compositor against 14,110 calls. Guard AI used 12,251 offline oracle cases; RNG used 2,048. These have different evidence levels. Re-run the corresponding [tests](../tests) after relevant changes.
+Routine proofs: 13,953 player/opponent/input/get-up calls; 14,110 compositor calls; 12,251 guard and 2,048 RNG offline cases.
 
-Visible ROM reconstruction reported 11,244 exact player PPU frames and 12,219 exact opponent OAM frames. This establishes source reconstruction, not pixel identity of original replacement art. Local reports: `research/evidence/animation/ppu_pose_validation.json` and `oam_pose_validation.json`. Evidence artifacts are not distributed in the public repository.
+Visible ROM reconstruction reported 11,244 exact player PPU frames and 12,219 exact opponent OAM frames. Replacement art is not pixel-identical. Local reports: `research/evidence/animation/ppu_pose_validation.json` and `oam_pose_validation.json`.
 
 ## Pipeline map
 
-Under `research/scripts/`, in dependency order:
+Under `research/scripts/`:
 
 1. `measure_animation.py`: capture measurements across visual audit, normal/right knockdowns, player get-up and long idle.
 2. `recover_clipped_extents.py`: hidden-extent matching and explicitly labeled art estimates.
@@ -31,14 +29,29 @@ Under `research/scripts/`, in dependency order:
 4. `build_opponent_visual_catalog.py`, `refine_actor_bounds.py`: identify body shapes and separate particles.
 5. `map_recovered_art.py`: assign original pose IDs/flips.
 6. `export_animation_geometry.py`, `export_animation_tracks.py`, `export_compositor_transitions.py`: production numeric data and comparison fixtures.
-7. `register_recovered_art.py`: original atlas region metadata; current script assumes older sheets and must be adapted for new art.
+7. `export_missing_player_geometry.py`, `export_fight_start.py`: decoded unobserved poses and first-controllable state.
+8. `register_cartoon_art.py`: current cartoon atlas region/flip metadata. The older registration exporter is obsolete.
 
 Do not run obsolete `map_displayed_poses.py` after PPU recovery; it can overwrite corrected pose selection.
 
+## Fight-routine and integration evidence
+
+`contact_vm_test.gd`: 6,983 calls/58 contacts, zero mismatches excluding stack. `fight_control_test.gd`: eight clock/scheduler/resource routines, 37,824 calls, zero mismatches. `recover_contact_program.py` owns export.
+
+`capture_full_fight.lua` captures `$A669..$A6C9` through terminal `$00=252`. `full_fight_parity_test.gd` runs the production adapter continuously from one seed and stable raw button samples: 4,959 frames/48 contacts match 143 fields through three knockdowns/TKO. `controller_poll.gd` recovers `$AFBD..$B020`; serial hardware, first entrance and full PPU parity are excluded. Report: `research/evidence/animation/full_fight_validation.json`.
+
+`export_referee_presentation.py` exports 29 numeric descriptors from bank-11 `$8280` high-picture commands. Player VM drives walking/counts; speech preserves bodies. `referee_presentation_test.gd` matches 4,959 frames/146 body transitions and count visibility against captured RAM/decoded geometry. Speech test matches 8,094 frames: 153 bubble, 154..163 digits, 166 Fight, 168 KO, 169 TKO; 150/151 erase bubbles. 172 passes 70 isolated ROM-executed ticks.
+
+Presentation tests check delayed incoming effects and windup cues. `defense_fight_parity_test.gd`: 2,183 frames/143 fields, two guards/four slips, zero mismatches.
+
 ## Known interpretation traps
 
+`body_fight_parity_test.gd` matches 3,135 consecutive frames/29 contacts/143 fields through heart exhaustion and player count-ten KO. `capture_body_fight.lua` supplies stable raw inputs; no combat reseeding. `$83EB` resets `$BC=1` at knockdown even with zero hearts; deriving it from HUD hearts caused post-knockdown divergence. Adapter preserves it. Body-counter parity covers 3,886 frames/148 fields, four body hits and three state-22 attacks; [animation audit](ANIMATION_AUDIT.md) owns visual/palette evidence. `getup_finish_parity_test.gd` matches 4,527 frames/44 contacts/143 fields through two returns and third-knockdown TKO.
+
+Round-return tests match 3,862 frames and 134 setup fields; [audit](ANIMATION_AUDIT.md). KO helpers pass 1,536 cases/4,684 calls. `$B65A..$B665` resets `$51=128`; finish scripts signal outcomes through `$00`. Export: `recover_knockdown_entry.py`.
+
 - Poses 58 and 64..67 are text/clear operations, not visible boxer bodies.
-- Get-up poses 68..71 have no complete observed hidden-body counterpart; their 61-pixel art extent is an estimate.
-- Compositor selector alone does not identify a body; composition is stateful. Offline invalid combinations are not evidence of missing reachable poses.
-- Local `research/evidence/comparison/index.html` uses captured-track overrides and is stale relative to current art/live code. Rebuild and label before presenting it as current evidence; it is not distributed.
-- See [current state](CURRENT_STATE.md) for the failing full-bout test; do not cite old prototype passes as active-adapter validation.
+- Get-up poses 68..71 have no complete observed hidden-body counterpart; their 61-pixel art extent is authored.
+- Composition is stateful; invalid offline combinations do not establish reachable poses.
+- Older clip comparison uses captured-track overrides and stale registration. Full-fight comparison uses the live adapter.
+- See [current state](CURRENT_STATE.md) for integration limits.
